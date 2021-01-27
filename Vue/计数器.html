@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计数器</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{content}}</p>
+        <button v-on:click="add">+</button>
+        <button v-on:click="sub">-</button>
+    </div>
+
+
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                content:0
+            },
+            methods:{
+                add:function (){
+                    console.log("被添加了");
+                    this.content++
+                },
+                sub:function(){
+                    console.log("被减少了");
+                    this.content--
+                }
+            }
+
+        })
+    </script>
+
+    
+</body>
+</html>
