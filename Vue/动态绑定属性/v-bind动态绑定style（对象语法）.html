@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>模板</title>
-    <script src="./js/vue.js"></script>
+    <title>v-bind动态绑定style 对象语法</title>
+    <script src="../js/vue.js"></script>
 </head>
 <body>
-      <div id="app">{{message}}</div>
+      <div id="app">
+          <!-- <h2 :style="{key(属性名):value(属性值)}">{{message}}</h2> -->
+          <h2 :style="{fontSize: '50px'}">{{message}}</h2>
+
+      </div>
      <script>
 
-         new Vue({
+        const app = new Vue({
              el:"#app",
              data:{
                  message:"你好啊"

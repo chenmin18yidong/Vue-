@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind动态绑定class(对象语法 )</title>
+    <script src="../js/vue.js"></script>
+</head>
+<style>
+    .active{
+         color: red;
+        
+     }
+</style>
+<body>
+      <div id="app">
+          <!--普通绑定的class和你自己定义的class是可以共存的-->
+         <!-- <h2 v-bind:class="{类名1: true,类名2:false }">{{message}}</h2> -->
+         <h2 v-bind:class="getClasses()">{{message}}</h2><!--调用方法-->
+         <h2 v-bind:class="{active: this.Isactive,line:this.Isline }">{{message}}</h2>
+         <button @click="btnclick">按钮</button>
+        </div>
+     <script>
+
+        const app = new Vue({
+             el:"#app",
+             data:{
+                 message:"你好啊",
+                 Isactive: true,
+                 Isline: true
+               },
+               methods: {
+                   btnclick: function(){
+                       this.Isactive = !this.Isactive  /*加叹号是取反的意思*/
+                   },
+                   getClasses:function(){/*方法*/
+                       return {active: this.Isactive,line:this.Isline }
+                   }
+               }
+         })
+     </script>
+    
+</body>
+</html>

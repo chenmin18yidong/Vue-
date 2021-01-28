@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind的基本属性</title>
+    <script src="../js/vue.js"></script>
+</head>
+<body>
+      <div id="app">
+          <img :src="imageUrl" alt="">
+      </div>
+     <script>
+
+        const app = new Vue({
+             el:"#app",
+             data:{
+                 message:"你好啊",
+                 imageUrl:"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fmedia-cdn.tripadvisor.com%2Fmedia%2Fphoto-s%2F01%2F3e%2F05%2F40%2Fthe-sandbar-that-links.jpg&refer=http%3A%2F%2Fmedia-cdn.tripadvisor.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614394231&t=01ca508cf26d6c1bebbea13ba9eed93a"
+             }
+         })
+     </script>
+    
+</body>
+</html>
