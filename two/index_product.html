@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/bootstrap4.5.min.css">
+    <title>Document</title>
+    <style>
+        .index_product_hgroup {
+            margin-top: 120px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .index_product_hgroup h2 {
+            height: 47px;
+            font-family: Microsoft YaHei;
+            font-weight: 700;
+            color: #3e3a36;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .index_product_hgroup p {
+            height: 19px;
+            margin-top: 22px;
+            font-family: Microsoft YaHei;
+            color: #3e3a36;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .index_product_list {
+            margin-block-end: 0px;
+        }
+
+        .index_product_list li {
+            padding-left: 7px;
+            padding-right: 7px;
+            overflow: hidden;
+            margin-bottom: 26px;
+            box-sizing: border-box;
+        }
+
+        .index_product_info {
+            width: 100%;
+            display: flex;
+            position: relative;
+            border: 1px solid rgba(228, 228, 228, 1);
+        }
+
+        .index_product_info>div {
+            padding-top: 17px;
+            padding-left: 24px;
+            height: 211px;
+        }
+
+        .index_product_info>div h3 {
+            width: 88px;
+            margin-bottom: 28px;
+            height: 29px;
+            font-family: Microsoft YaHei;
+            color: #3e3a36;
+            font-size: 22px;
+        }
+
+        .index_product_info>div p {
+            width: 141px;
+            height: 76px;
+            font-family: Microsoft YaHei;
+            color: #3e3a36;
+            font-size: 14px;
+        }
+
+        .index_product_info img {
+            width: 150px;
+            height: 210px;
+        }
+        /*鼠标悬浮时显示遮罩层*/
+        .index_product_view {
+            width: 56px;
+            display: none;
+            height: 19px;
+            font-family: Microsoft YaHei;
+            color: #00a3fe;
+            font-size: 14px;
+        }
+
+        .index_product_mark {
+            background-color: rgba(217, 242, 253, 0.5);
+            position: absolute;
+            top: 0px;
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .index_product_mark a {
+            margin: auto;
+            background-color: rgba(0, 163, 254, 1);
+            line-height: 36px;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            width: 100px;
+            height: 36px;
+        }
+
+        /*产品中心：了解更多*/
+        .index_product_list li:hover .index_product_mark {
+            display: flex;
+        }
+
+        .index_product_list li:last-child .index_product_info img {
+            width: 43%;
+        }
+
+        .index_product_list li:last-child .index_product_paragraph {
+            display: none;
+        }
+
+        .index_product_list li:last-child .index_product_info {
+            flex-direction: row-reverse;
+        }
+
+        .index_product_list li:last-child .index_product_mark {
+            width: 57%;
+            padding: 0px;
+            left: 0px;
+            display: flex;
+            background-color: rgba(217, 242, 253, 1);
+        }
+        .index_product_more{
+            display: none;
+        }
+
+        @media (max-width:768px) {
+            .index_product_hgroup {
+                margin-top: 40px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .index_product_hgroup h2 {
+                width: 100%;
+                height: 24px;
+                font-family: Microsoft YaHei;
+                color: #444444;
+                font-size: 18px;
+                line-height: 24px;
+                text-align: center;
+            }
+
+            .index_product_hgroup p {
+                width: 100%;
+                height: 18px;
+                font-family: Microsoft YaHei;
+                color: #999999;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                margin-top: 6px;
+            }
+
+            .index_product_list li {
+                margin-bottom: 24px;
+            }
+
+            .index_product_info>div {
+                height: 124px;
+            }
+
+            .index_product_view {
+                display: block;
+                margin-top: 12px;
+            }
+
+            .index_product_info img {
+                width: 150px;
+                height: 122px;
+            }
+
+            .index_product_list li {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .index_product_list li:hover .index_product_mark {
+                display: none;
+            }
+
+            .index_product_info>div {
+                padding-top: 15px;
+                padding-right: 20px;
+            }
+
+            .index_product_info>div h3 {
+                width: 64px;
+                margin-bottom: 0px;
+                height: 21px;
+                font-family: Microsoft YaHei;
+                color: #3e3a36;
+                font-size: 16px;
+            }
+
+            .index_product_info>div p {
+                width: 100%;
+                height: 40px;
+                font-family: Microsoft YaHei;
+                color: #666666;
+                margin-bottom: 0px;
+                font-size: 13px;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+            }
+
+            /*最后一个产品*/
+            .index_product_list li:last-child {
+                display: none;
+            }
+
+            /*移动端了解更多按钮*/
+            .index_product_more {
+                display: block;
+                width: 60px;
+                height: 20px;
+                margin: auto;
+                font-size: 12px;
+                color: white;
+                text-align: center;
+                line-height: 20px;
+                background-color: #00a3fe;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="public_width">
+            <div class="index_product_hgroup">
+                <h2>产品中心</h2>
+                <p>新年新礼，新未来</p>
+            </div>
+            <ul class="row index_product_list">
+                <li class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="index_product_info">
+                        <img src="image/index_product.png" alt="">
+                        <div>
+                            <h3>产品名称</h3>
+                            <p>
+                                我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述
+                            </p>
+                            <a href="" class="index_product_view">了解详情</a>
+                        </div>
+                        <div class="index_product_mark">
+                            <a href="">我要体验</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="index_product_info">
+                        <img src="image/index_product.png" alt="">
+                        <div>
+                            <h3>产品名称</h3>
+                            <p>
+                                我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述
+                            </p>
+                            <a href="" class="index_product_view">了解详情</a>
+                        </div>
+                        <div class="index_product_mark">
+                            <a href="">我要体验</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="index_product_info">
+                        <img src="image/index_product.png" alt="">
+                        <div>
+                            <h3>产品名称</h3>
+                            <p>
+                                我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述
+                            </p>
+                            <a href="" class="index_product_view">了解详情</a>
+                        </div>
+                        <div class="index_product_mark">
+                            <a href="">我要体验</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="index_product_info">
+                        <img src="image/index_product.png" alt="">
+                        <div>
+                            <h3>产品名称</h3>
+                            <p>
+                                我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述
+                            </p>
+                            <a href="" class="index_product_view">了解详情</a>
+                        </div>
+                        <div class="index_product_mark">
+                            <a href="">我要体验</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="index_product_info">
+                        <img src="image/index_product.png" alt="">
+                        <div class="index_product_paragraph">
+                            <h3>产品名称</h3>
+                            <p>
+                                我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述我是描述
+                            </p>
+                            <a href="" class="index_product_view">了解详情</a>
+                        </div>
+                        <div class="index_product_mark">
+                            <a href="">了解更多</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <a href="" class="index_product_more">了解更多</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top</title>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="./css/bootstrap4.5.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <script src="./js/wow.js"></script>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/bootstrap4.5.min.js"></script>
+    <script src="./js/basic.js"></script>
+</head>
+<style>
+    .top {
+        width: 100%;
+        height: 70px;
+        
+    }
+    .top_nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       
+    }
+
+    .top_logo {
+        margin: 12px 0;
+    }
+     .top_title{
+         display:flex;
+         flex-direction: row;
+         justify-content: space-between;
+         z-index: 10;
+     }
+    .top_title ul li {
+        display: inline-block;
+        width: 64px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin: 26px 42px 0 0;
+    }
+    .top_title ul li a {
+        width: 32px;
+        height: 21px;
+        font-family: Microsoft YaHei;
+        font-size: 16px;
+        color: black;
+        text-decoration: none;
+        padding: 0 0 22px 0;
+    }
+
+    .top_title ul li:hover a {
+        color: #00a3fe;
+    }
+
+    .top_title ul li:hover a {
+        border-bottom: 2px solid #00a3fe;
+    }
+
+    .product_center_bottom_list {
+        position: absolute;
+        top: 70px;
+        height: 96px;
+        width: 92px;
+        margin-left: -14px;
+        background: rgba(255, 255, 255, 1);
+        visibility: hidden;
+    }
+
+    .top_title ul li:nth-child(2):hover .product_center_bottom_list {
+        visibility: initial;
+    }
+
+    .product_center_bottom_list p {
+        display: inline-block;
+        width: 100%;
+        font-size: 14px;
+        margin: 20px 0 0 0;
+    }
+
+    .top_title ul li:hover .product_center_bottom_list p a {
+        color: black;
+    }
+
+    .top_title ul li:hover .product_center_bottom_list p a {
+        border: none
+    }
+
+    /*banner*/
+    .banner {
+        position: relative;
+    }
+
+    .banner img {
+        width: 100%;
+        height: 300px;
+        /* object-fit: cover; */
+    }
+
+    .banner_title {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        color: black;
+    }
+
+    .banner_title h2 {
+        font-size: 44px;
+        line-height: 66px;
+    }
+
+    .banner_title p {
+        font-size: 16px;
+        line-height: 28px;
+        margin-top: 22px;
+    }
+    /*汉堡包*/
+.hamburger {
+    position: absolute;
+    top: 6px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+    z-index: 10;
+    display: none;
+    position: fixed;
+}
+
+.hamburger i {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background: black;
+    margin: 6px auto;
+}
+
+.hamburger i {
+    transform-origin: left;
+    transition: 0.5s;
+}
+
+.hamburger.active i:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    top: 15px;
+    opacity: 1;
+}
+
+.hamburger.active i:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active i:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    top: 15px;
+    opacity: 1
+}
+
+/*点击汉堡包之后，会出现全局的遮罩层*/
+.body_bg_ceng {
+    position: fixed;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 7;
+    display: none;
+}
+    @media(max-width:1400px) {
+    .public_width {
+        width: 100%;
+    }
+    .banner_title p:nth-child(1) {
+        width: 350px;
+        display: inline-block;
+        font-size: 44px;
+        line-height: 66px;
+        margin: 60px 0 0px 0;
+        padding: 9px 70px 8px 21px;
+    }
+
+    .banner_title p:nth-child(2) {
+        width: 200px;
+    }
+}
+
+@media(max-width:1200px) {
+    .banner_title p:nth-child(1) {
+        font-size: 34px;
+        line-height: 30px;
+        padding: 6% 0 20px 0;
+    }
+}
+
+@media(max-width:850px) {
+    .banner_title p:nth-child(1) {
+        margin: 28px 0 0px 0;
+        font-size: 26px;
+    }
+}
+
+@media(max-width:768px) {
+    .top{
+        width: 100%;
+        height: 44px;
+    }
+    .top_logo{
+        margin: 8px 0;
+        margin-left: 38%;
+        height: 10px;
+    }
+    .top_logo img{
+        display: inline-block;
+        width: 90px;
+    }
+    .top_title{
+        position: absolute;
+        margin-top: 44px;
+        left: 0%;
+        width: 100%;
+        flex-direction: column;
+        background:rgba(255, 255, 255, 1) ;
+        display: none;
+    }
+    .top_title ul li {
+        width: 100%;
+        height: 46px;
+        line-height: 46px;
+        text-align: left;
+        border-top: 1px solid rgba(223, 226, 235, 1);
+        border-bottom: 1px solid rgba(223, 226, 235, 1);
+        margin: 0px 0px 0 0px;
+    }
+    .top_title ul li a {
+        width: 100%;
+        padding: 0 0 22px 20px;
+    }
+    .top_title ul li:hover a {
+        color: black;
+    }
+    .top_title ul li:hover a {
+        border-bottom:  none;
+    }
+
+    /*产品中心的下拉*/
+    .product_center_bottom_list {
+        position: absolute;
+        width: 100%;
+        background: rgb(197, 195, 195);
+        visibility: hidden;
+        
+    }
+
+    .top_title ul li:nth-child(2):hover .product_center_bottom_list {
+        margin-left: 0px;
+        position: relative;
+        top: 0;
+        visibility: initial;
+    }
+
+    .product_center_bottom_list p {
+        font-size: 12px;
+        margin:  0 0 0 20px;
+    }
+    
+
+    .banner_img {
+        height: 90px;
+    }
+
+    .small_product {
+        display: block;
+    }
+    /* 轮播 */
+    .banner_title {
+        margin-left: 0;
+        left: 120px;
+        top: 46px;
+    }
+
+    .banner img {
+        height: 184px;
+    }
+
+    .banner_title h2 {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .banner_title p {
+        font-size: 20px;
+        line-height: 23px;
+        margin-top: 12px;
+    }
+    .hamburger {
+        display: block;
+    }
+    
+}
+
+@media(max-width:500px) {
+    /* 轮播 */
+    .banner img {
+        height: 90px;
+    }
+
+    .banner_title h2 {
+        font-size: 17px;
+        line-height: 24px;
+    }
+
+    .banner_title {
+        top: 22px;
+        left: 59px;
+        margin: 0;
+    }
+
+    .banner_title p {
+        margin-top: 6px;
+        font-size: 12px;
+    }
+    /*底部*/
+    .buttom {
+        width: 100%;
+        background-color: rgba(43, 43, 43, 1);
+        padding-top: 78px;
+    } 
+   
+}
+
+</style>
+
+<body>
+    <!--头部导航条-->
+    <div class="top">
+        <div class="top_nav public_width ">
+            <div class="top_logo"><a href="./index.html"><img src="./image/logo_pc.png" alt=""></a></div>
+            <div class="top_title">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">产品中心</a>
+                        <div class="product_center_bottom_list">
+                            <p><a href="#">全部产品</a></p>
+                            <p><a href="#">全部产品</a></p>
+                        </div>
+                    </li>
+                    <li><a href="#">关于公司</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--banner-->
+    <!-- 轮播 -->
+    <div class="banner">
+        <img src="./image/otherbanner_image.png" alt="">
+        <div class="banner_title">
+            <h2>产品中心</h2>
+            <p>不断升级创新</p>
+        </div>
+    </div>
+
+     <!--汉堡包-->
+     <div class="hamburger">
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+    <!--点击汉堡包之后，会出现全局的遮罩层-->
+    <div class="body_bg_ceng "> </div>
+
+
+
+</body>
+
+</html>

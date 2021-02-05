@@ -1,0 +1,67 @@
+/* 轮播图 */
+.about_banner{
+    width: 100%;
+    height: 300px;
+}
+.about_banner_title img{
+    position: relative;
+}
+.about_banner_title{
+    position: absolute;
+    top: 0;
+    margin-top: 110px;
+}
+.about_banner_title h1{
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 66px;
+}
+.about_banner_title span{
+    color: #e4e4e4;
+    margin-top: 50px;
+    line-height: 34px;
+}
+/* 主体 */
+.about_mian{
+    width: 100%;
+    background-color: #fff;
+    padding-top: 120px;
+}
+.about_mian_top{
+    text-align: center;
+}
+.about_mian_top h2{
+    font-weight: 700;
+    line-height: 48px;
+}
+.about_mian_top span{
+    line-height: 44px;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 60px;
+}
+.about_mian_bottom{
+    border: 1px solid #999999;
+    padding: 112px 86px 60px 46px;
+    margin: 0;
+}
+.about_mian_bottom p:nth-child(3){
+    color: pink;
+    margin-top: 10px;
+}
+.about_mian_bottom_right_img{
+    padding: 86px 0 134px 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about_mian_bottom_right_img p{
+    background-color: palegreen;
+    height: 100%;
+    display: block;
+}
+
+/* 自媒体查询 */
+@media(max-width:768px){
+
+}

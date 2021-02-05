@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/public.css">
+    <title>Document</title>
+    <style>
+        .index_honor {
+            background-image: url(image/index_glory_1.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            padding-top: 84px;
+        }
+
+        /*模块标题*/
+        .index_honor_hgroup {
+            margin-bottom: 60px;
+            color: white;
+            text-align: center;
+        }
+
+        .index_honor_hgroup h2 {
+            height: 47px;
+            font-family: Microsoft YaHei;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .index_honor_hgroup p {
+            height: 19px;
+            font-family: Microsoft YaHei;
+            color: #ffffff;
+            margin-top: 22px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /*荣誉列表*/
+        .index_honor_list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .index_honor_list li {
+            width: 313px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+
+        .index_honor_list li div {
+            background-color: white;
+            padding-top: 20px;
+            padding-left: 18px;
+            padding-right: 18px;
+            /* box-shadow: 0px 5px 10px rgba(223, 226, 235, 1); */
+        }
+
+        .index_honor_list li img {
+            width: 100%;
+            display: block;
+            height: 193px;
+        }
+
+        .index_honor_list li p {
+            height: 71px;
+            font-size: 22px;
+            line-height: 71px;
+            text-align: center;
+            margin-left: -18px;
+            margin-right: -18px;
+            box-shadow: 0px 5px 10px rgba(223, 226, 235, 1)
+        }
+
+        @media (max-width:1400px) {
+            .index_honor_list {
+                flex-wrap: wrap;
+            }
+            .index_honor_width{
+                box-sizing: border-box;
+            }
+        }
+
+        @media (max-width:768px) {
+            .index_honor_hgroup h2 {
+                height: 24px;
+                font-family: Microsoft YaHei;
+                color: #444444;
+                font-size: 18px;
+                line-height: 24px;
+                text-align: center;
+            }
+
+            .index_honor_hgroup p {
+                height: 18px;
+                font-family: Microsoft YaHei;
+                color: #999999;
+                font-size: 14px;
+                margin-top: 6px;
+                line-height: 16px;
+                text-align: center;
+            }
+            .index_honor {
+                padding-top: 40px;
+                background-position-y: 105px;
+            }
+            .index_honor_hgroup {
+                margin-bottom: 70px;
+            }
+
+            .index_honor_width {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .index_honor_list li {
+                width: 160px;
+            }
+
+            .index_honor_list li p {
+                display: none;
+            }
+
+            .index_honor_list li div {
+                padding: 9px 9px 15px 9px;
+            }
+            .index_honor_list li img{
+                height: auto;
+            }
+        }
+        @media (max-width:359px) {
+            .index_honor_list li {
+                width: 50%;
+            }
+            .index_honor_width{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="index_honor">
+        <div class="public_width index_honor_width">
+            <div class="index_honor_hgroup">
+                <h2>荣誉资质</h2>
+                <p>我们精益求精，多年来荣获各界认可</p>
+            </div>
+            <ul class="index_honor_list">
+                <li>
+                    <div>
+                        <img src="image/index_glory_2.png" alt="">
+                        <p>奖项描述奖项描述</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="image/index_glory_2.png" alt="">
+                        <p>奖项描述奖项描述</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="image/index_glory_2.png" alt="">
+                        <p>奖项描述奖项描述</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="image/index_glory_2.png" alt="">
+                        <p>奖项描述奖项描述</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
