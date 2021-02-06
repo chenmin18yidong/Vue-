@@ -4,12 +4,8 @@ ul{
     margin-block-start: 0px;
     margin-block-end: 0px;
 }
-.public_width{
-    width: 1400px;
-    margin: auto;
-}
 .footer{
-    height: 500px;
+    height: 508px;
     padding-top: 1px;
     display: flex;
     flex-direction: column;
@@ -35,9 +31,58 @@ ul{
 }
 .footer_nav{
     display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
 }
-.footer_nav_qr,.footer_nav_link{
-    margin-right: auto;
+.footer_nav_logo span,.footer_nav_link ul li a,.footer_nav_qr span{
+    display: block;
+    text-decoration: none;
+    height:21px;
+    font-family:Microsoft YaHei;
+    color:#666666;
+    font-size:16px;
+}
+.footer_nav_logo{
+    width: 335px;
+    margin-top: -20px;
+}
+.footer_nav_logo span{
+    margin-top: 20px;
+}
+.footer_nav_logo img{
+    margin-left: 29px;
+    width: 100%;
+}
+.footer_nav_link{
+    display: flex;
+    align-items: center;
+}
+.footer_nav_link ul{
+    display: flex;
+    width: 365px;
+    margin-top: -20px;
+    justify-content: space-between;
+}
+.footer_nav_qr{
+    width: 105px;
+}
+.footer_nav_qr img{
+    height: 100px;
+    width: 100px;
+    margin-top: 18px;
+    margin-bottom: 23px;
+}
+.footer_nav_qr span{
+    text-align: center;
+    width: 100%;
+}
+#footer_hotline{
+    height: 21px;
+    font-family: Microsoft YaHei;
+    color: #00a3fe;
+    font-size: 16px;
+    margin-top: 6px;
 }
 .record{
     margin: auto auto 0px auto;
@@ -50,11 +95,63 @@ ul{
     width: fit-content;
     margin: auto;
 }
-@media (max-width:1400px){
-    .public_width{
-        width: 100%;
-        padding-left: 15px;
-        box-sizing: border-box;
-        padding-right: 15px;
+.record>div .copyright{
+    width: 164px;
+    margin-right: 64px;
+}
+@media (max-width:768px){
+    .footer{
+        height: 198px;
+    }
+    .friendly,.footer_nav,.record{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .footer_nav_link,.footer_nav_qr img,.footer_nav_logo span,
+    .footer_nav_qr span:first-child,.record>div span:last-child{
+        display: none;
+    }
+    .copyright,.footer_nav_qr span,#footer_hotline{
+        height: 17px;
+        font-size: 12px;
+    }
+    .friendly{
+        padding-bottom: 20px;
+        margin-top: 16px;
+        height: 50px;
+        overflow: hidden;
+    }
+    .friendly li a{
+        height: 17px;
+        margin: auto 8px;
+        width:52px;
+        font-family: Microsoft YaHei;
+        color: #666666;
+        font-size: 13px;
+        text-align: center;
+    }
+    .friendly li:first-child{
+        height: 21px;
+        white-space: nowrap;
+        font-family: Microsoft YaHei;
+        color: #666666;
+        font-size: 16px;
+        text-align: center;
+    }
+    .footer_nav_logo img{
+        width: 89px;
+        height: 18px;
+        margin-left: 0px;
+    }
+    .record{
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+    .record > div .copyright{
+        width: 100% ;
+        color:#666666;
+        text-align: center;
+        margin-right: 0px;
+        margin: auto;
     }
 }

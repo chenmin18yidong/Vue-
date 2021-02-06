@@ -31,6 +31,14 @@
     .news_cen_paging .news_actives {
         border: 2px solid #58c2f3;
     }
+
+    /* 移动端 */
+    @media screen and (max-width: 550px) {
+        .news_cen_paging ul .news_hide {
+            display: none;
+        }
+        
+    }
 </style>
 
 <body>
@@ -44,10 +52,10 @@
                 <li><a href="">3</a></li>
                 <li><a href="">4</a></li>
                 <li><a href="">5</a></li>
-                <li><a href="">6</a></li>
-                <li><a href="">7</a></li>
-                <li><a href="">8</a></li>
-                <li><a href="">9</a></li>
+                <li class="news_hide"><a href="">6</a></li>
+                <li class="news_hide"><a href="">7</a></li>
+                <li class="news_hide"><a href="">8</a></li>
+                <li class="news_hide"><a href="">9</a></li>
                 <li><a href="">&gt;</a></li>
             </ul>
         </div>

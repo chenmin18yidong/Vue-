@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页-回到顶部+客服</title>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+</head>
+
+<style>
+    .index_to_top {
+        position: fixed;
+        top: 400px;
+        right: 0;
+    }
+</style>
+
+<body>
+    <!-- 首页-回到顶部+客服 -->
+    <div class="index_to_top">
+        <div class="service_img">
+            <img src="./image/index_customer_service.png" alt="">
+        </div>
+
+        <div class="to_top_img">
+            <img src="./image/index_to_top.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $(".to_top_img").click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                },500);
+            })
+        })
+    </script>
+</body>
+
+</html>

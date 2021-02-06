@@ -14,131 +14,32 @@ h4 {
     margin: 0;
     padding: 0;
 }
-
 ul {
     list-style: none;
     padding-inline-start: 0px;
 }
-
 img {
     border: none;
     vertical-align: middle;
 }
-
-a {
+a ,a:hover{
     text-decoration: none;
-    color: black !important;
+    color: black ;
 }
-
-a:hover {
-    color: black;
-    text-decoration: none !important;
-}
-
 i {
     font-style: normal;
 }
-
 input,
 button {
     margin: 0;
     padding: 0;
-}
-
-button {
     outline: none;
 }
-
-/* body {
-    color: #3c3c3c;
-    background-color: #f4f4f4;
-} */
-
 
 /*公共页面宽度*/
 .public_width {
     width: 1400px;
     margin: auto;
-}
-/*模块标题*/
-.public_title{
-    font-size: 32px;
-    line-height: 48px;
-    color: #444;
-    text-align: center;
-}
-/*模块副标题*/
-.public_subtitle{
-    font-size: 14px;
-    line-height: 24px;
-    margin-top: 22px;
-    margin-bottom: 60px;
-    color: #999;
-    text-align: center;
-}
-/*模块上下间距*/
-.module_spacing{
-    margin-top: 120px;
-    margin-bottom: 120px;
-}
-/*新闻标题*/
-.public_news_title{
-    font-size: 22px;
-    line-height: 32px;
-    color: #444;
-}
-/*正文，感言，产品名称*/
-.public_text{
-    font-size: 16px;
-    line-height: 26px;
-    color: #444;
-}
-/*简介。日期，副标题，注释字体大小*/
-.public_text_small{
-    font-size: 14px;
-    color: #999;
-    line-height: 24px;
-}
-/*间隔线颜色*/
-/* .public_linear_bg{
-    background-color: #e4e4e4;
-} */
-
-/*大按钮*/
-.btn_bigger{
-    display: block;
-    background-color: #444;
-    color:white;
-    font-size: 18px;
-    border: none;
-    width: 138px;
-    height: 44px;
-    line-height: 44px;
-    text-align: center;
-}
-
-/*小按钮*/
-.btn_small{
-    display: block;
-    background-color: #444;
-    color:white;
-    font-size: 16px;
-    width: 100px;
-    border: none;
-    height: 36px;
-    line-height: 36px;
-    text-align: center;
-}
-/*文字按钮*/
-.btn_text{
-    display: block;
-    font-size: 16px;
-    width: 100px;
-    border: none;
-    line-height: 16px;
-    height: 16px;
-    text-align: center;
-    color: #4d82d1;
 }
 
 @media (max-width:1400px){

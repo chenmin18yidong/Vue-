@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 — 轮播</title>
+    <link rel="stylesheet" href="./css/bootstrap4.5.min.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="./js/swiper-bundle.min.js"></script>
+</head>
+
+<style>
+    a{
+        text-decoration: none !important;
+    }
+    li{
+        list-style: none;
+    }
+    .swiper-wrapper{
+        padding-left: 0px;
+    }
+    .swiper-wrapper .swiper-slide{
+        height: 600px;
+    }
+    .swiper-wrapper .swiper-slide img{
+        max-width: 100%;
+    }
+    .swiper_point li {
+        width: 12px;
+        height: 12px;
+        border-radius: 5px;
+        margin: auto 40px;
+    }
+
+    .point_default {
+        background-color: gray;
+    }
+
+    .point_active {
+        background-color: black;
+    }
+    .index_banner_title{
+        position: relative;
+        top: -400px;
+        margin-left: 289px;
+    }
+    .index_banner_title span{
+        display: block;
+        width: 59px;
+        height: 19px;
+        color: #ffffff;
+        background-color: #ffb901;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        font-family:Microsoft YaHei;
+    }
+    .index_banner_title h2{
+        font-size: 44px;
+        font-weight: bold;
+        color: #444444;
+        padding-bottom: 22px;
+        margin-bottom: 0px;
+        font-family:Microsoft YaHei;
+    }
+    .index_banner_title p{
+        font-size: 14px;
+        color: #444444;
+        line-height: 30px;
+        margin-bottom: 0px;
+        font-family:Microsoft YaHei;
+    }
+    .index_banner_title a{
+        margin-top: 64px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 44px;
+        color: #ffffff;
+        display: block;
+        width: 138px;
+        height: 44px;
+        background-color: #00a3fe;
+    }
+</style>
+
+<body>
+    <!-- 首页轮播 -->
+    <div class="swiper-container index_banner">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <div class="index_banner_img">
+                    <img src="./image/index_banner.png" alt="">
+                </div>
+                <div class="index_banner_title">
+                    <span>新春钜惠</span>
+                    <h2>新年新礼，新未来</h2>
+                    <p>Surface 全系列享24期免息分期，丰富好礼送不停，精选机型延保
+                        <br>
+                        服务限时5折，更有官方定制新春红包袋等你申领
+                    </p>
+                    <a href="">查看优惠</a>
+                </div>
+            </li>
+
+            <li class="swiper-slide">
+                <div class="index_banner_img">
+                    <img src="./image/index_banner.png" alt="">
+                </div>
+                <div class="index_banner_title">
+                    <span>新春钜惠</span>
+                    <h2>新年新礼，新未来</h2>
+                    <p>Surface 全系列享24期免息分期，丰富好礼送不停，精选机型延保
+                        <br>
+                        服务限时5折，更有官方定制新春红包袋等你申领
+                    </p>
+                    <a href="">查看优惠</a>
+                </div>
+            </li>
+
+            <li class="swiper-slide">
+                <div class="index_banner_img">
+                    <img src="./image/index_banner.png" alt="">
+                </div>
+                <div class="index_banner_title">
+                    <span>新春钜惠</span>
+                    <h2>新年新礼，新未来</h2>
+                    <p>Surface 全系列享24期免息分期，丰富好礼送不停，精选机型延保
+                        <br>
+                        服务限时5折，更有官方定制新春红包袋等你申领
+                    </p>
+                    <a href="">查看优惠</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="swiper-pagination"></ul>
+    </div>
+    
+    <script>
+        var mySwiper = new Swiper('.swiper-container',{
+            autoplay:true,  //默认自动滑动
+            flipEffect: {
+                slideShadows: true,
+                limitRotation: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',             //分页样式-圆点
+                // type: 'fraction',            //分页样式-数字
+                // type : 'progressbar',        //分页样式-进度条
+                // bulletElement: 'li',
+                // bulletClass: 'point_default',
+                // bulletActiveClass: 'point_active'
+            },
+        })
+    </script>
+</body>
+
+</html>

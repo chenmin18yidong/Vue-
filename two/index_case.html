@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页案例介绍</title>
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/bootstrap4.5.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <script src="./js/bootstrap4.5.min.js"></script>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/wow.js"></script>
+</head>
+<style>
+    .index_case {
+        margin-top: 120px;
+    }
+
+    /* 标题 */
+    .news_cen1_title {
+        text-align: center;
+    }
+
+    .news_cen1_title h2 {
+        font-weight: bold;
+        color: #3e3a36;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .news_cen1_title p {
+        color: #3e3a36;
+        margin-top: 22px;
+        font-size: 14px;
+    }
+
+    /* 内容 */
+    .index_case_con {
+        display: flex;
+        margin-top: 60px;
+    }
+
+    /* 左 */
+    .index_case_con_lef {
+        margin-right: 60px;
+    }
+
+    .index_case_con_lef_img {
+        height: 340px;
+    }
+
+    .index_case_con_lef_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .index_case_con_lef_txt p {
+        color: #444;
+        font-size: 22px;
+        margin: 22px 0 28px;
+    }
+
+    .index_case_con_lef_txt span {
+        color: #444;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+
+    /* 右 */
+    .index_case_con_rig_img {
+        width: 342px;
+        height: 170px;
+        margin-right: 24px;
+    }
+
+    .index_case_con_rig_img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .index_case_con_rig_txt {
+        width: 396px;
+        height: 95px;
+    }
+
+    .index_case_con_rig_txt p {
+        color: #444;
+        font-size: 22px;
+        margin-bottom: 28px;
+    }
+
+    .index_case_con_rig_txt span {
+        color: #444;
+        font-size: 14px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+
+    .index_case_con_rig ul li {
+        margin-bottom: 26px;
+    }
+
+    /* 移动端 */
+    @media screen and (max-width: 768px) {
+        .index_case {
+            margin-top: 42px;
+        }
+
+        /* 标题 */
+        .news_cen1_title h2 {
+            color: #444;
+            font-size: 28px;
+            line-height: 24px;
+        }
+
+        .news_cen1_title p {
+            color: #999;
+            line-height: 16px;
+        }
+
+        /* 内容 */
+        .index_case_con {
+            display: block;
+            margin-top: 26px;
+        }
+
+        /* 左 */
+        .index_case_con_lef {
+            display: flex;
+            border: 1px solid #dfe2eb;
+            margin: auto;
+            padding: 10px;
+            box-shadow: 0px 3px 6px rgba(68, 68, 68, 0.2);
+        }
+
+        .index_case_con_rig ul li {
+            display: flex;
+            border: 1px solid #dfe2eb;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-shadow: 0px 3px 6px rgba(68, 68, 68, 0.2);
+        }
+
+        .index_case_con_lef_img,
+        .index_case_con_rig_img {
+            width: 238px;
+            height: 162px;
+            margin-right: 40px;
+
+        }
+
+        .index_case_con_lef_txt span,
+        .index_case_con_rig_txt p {
+            max-width: 438px;
+        }
+
+        /* 右 */
+        .index_case_con_rig {
+            margin-top: 20px;
+        }
+    }
+
+    @media screen and (max-width: 460px) {
+        .index_case_con_lef_img {
+            margin-right: 18px;
+            width: 218px;
+        }
+
+        .news_cen1_title h2 {
+            font-size: 22px;
+        }
+
+        .news_cen1_title p {
+            margin-top: 14px;
+        }
+    }
+
+   
+</style>
+
+<body>
+    <div class="index_case">
+        <div class="public_width">
+            <!-- 标题 -->
+            <div class="news_cen1_title">
+                <h2>案例介绍</h2>
+                <p>新年新礼，新未来</p>
+            </div>
+            <!-- 内容 -->
+            <div class="index_case_con">
+                <div class="index_case_con_lef">
+                    <div class="index_case_con_lef_img">
+                        <img src="./image/index_case_1.png" alt="">
+                    </div>
+                    <div class="index_case_con_lef_txt">
+                        <p>电脑系统</p>
+                        <span>Windows 95、Windows 98 、WindowsMe、Windows 2000、Windows XP、Windows Server 2003、Windows
+                            Vista、 Windows 7 、 Windows 8、Windows 8.1、Windows 10</span>
+                    </div>
+                </div>
+                <div class="index_case_con_rig">
+                    <ul>
+                        <li class="d-flex">
+                            <div class="index_case_con_rig_img">
+                                <img src="./image/index_case_2.png" alt="">
+                            </div>
+                            <div class="index_case_con_rig_txt">
+                                <p>MS-DOS</p>
+                                <span>MS-DOS：微软公司的早期产品，它是一个命令行界面。早期的Windows版本要在MS-DOS下运行，到了Windows
+                                    NT及以后的产品已经可以脱离MS-DOS运行了，基于用户因软硬件在 Windows NT 不能正常运作，微软相续推出Windows 95，Windows
+                                    98，Windows Me在MS-DOS下运行的过渡产品。</span>
+                            </div>
+                        </li>
+                        <li class="d-flex">
+                            <div class="index_case_con_rig_img">
+                                <img src="./image/index_case_2.png" alt="">
+                            </div>
+                            <div class="index_case_con_rig_txt">
+                                <p>MS-DOS</p>
+                                <span>MS-DOS：微软公司的早期产品，它是一个命令行界面。早期的Windows版本要在MS-DOS下运行，到了Windows
+                                    NT及以后的产品已经可以脱离MS-DOS运行了，基于用户因软硬件在 Windows NT 不能正常运作，微软相续推出Windows 95，Windows
+                                    98，Windows Me在MS-DOS下运行的过渡产品。</span>
+                            </div>
+                        </li>
+                        <li class="d-flex">
+                            <div class="index_case_con_rig_img">
+                                <img src="./image/index_case_2.png" alt="">
+                            </div>
+                            <div class="index_case_con_rig_txt">
+                                <p>MS-DOS</p>
+                                <span>MS-DOS：微软公司的早期产品，它是一个命令行界面。早期的Windows版本要在MS-DOS下运行，到了Windows
+                                    NT及以后的产品已经可以脱离MS-DOS运行了，基于用户因软硬件在 Windows NT 不能正常运作，微软相续推出Windows 95，Windows
+                                    98，Windows Me在MS-DOS下运行的过渡产品。</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,23 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>产品中心</title>
     <link rel="stylesheet" href="./css/public.css">
     <link rel="stylesheet" href="./css/bootstrap4.5.min.css">
-    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/basic.css">
     <script src="./js/jquery-3.5.1.min.js"></script>
     <script src="./js/bootstrap4.5.min.js"></script>
-  
+    <script src="./js/wow.js"></script>
+    <script src="./js/basic.js"></script>
+
 </head>
+<style>
+    /*更多产品*/
+    .product_more_product {
+        margin-top: 120px;
+    }
+
+    .product_more_product .product_title p {
+        width: 1400px;
+        margin: 0 auto;
+        margin-bottom: 24px;
+        height: 47px;
+        font-weight: 700;
+        color: #3e3a36;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .product_more_product .product_title p:nth-child(2) {
+        display: none;
+    }
+
+    .product_more_product_nav {
+        width: 100%;
+        background: rgba(242, 242, 242, 1);
+    }
+
+    .product_more_product_nav ul li {
+        display: inline-block;
+        padding: 22px 64px 22px 0;
+        font-size: 16px;
+        text-align: center;
+     
+    }
+
+    .product_more_product a {
+        color: black;
+    }
+
+    .product_more_product_list a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .product_more_product_nav ul li:hover a {
+        text-decoration: none;
+        color: rgba(0, 163, 254, 1);
+    }
+
+    /*产品列表*/
+    .product_more_product_list {
+        margin: 60px auto;
+    }
+
+    .product_more_product_list .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .product_more_product_list ul li {
+        margin-bottom: 54px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .produt_list_box {
+        width: 312px;
+        height: 392px;
+        display: inline-block;
+        border: 1px solid;
+    }
+
+    .product_more_product_list ul li img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .product_more_product_list ul li:hover .produt_list_box img {
+        transition: 0.5s;
+        height: 176px;
+    }
+
+    .product_more_product_list .produt_list_box {
+        border: 1px solid rgba(223, 226, 235, 1);
+    }
+
+    .product_more_product_list .product_list_text {
+        text-align: center;
+        height: 214px;
+    }
+
+    .product_more_product_list .product_list_text p:nth-child(1) {
+        margin: 40px 0 10px 0;
+    }
+
+    .product_more_product_list .product_list_text p:nth-child(2) {
+        margin: 0 38px;
+        width: 234px;
+        height: 57px;
+        color: #444444;
+        font-size: 14px;
+        text-align: left;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        opacity: 0;
+    }
+
+    .product_more_product_list .product_list_text p:nth-child(3) {
+        margin: 0 0 0 120px;
+        position: absolute;
+        bottom: 16px;
+    }
+
+    .product_more_product_list ul li:hover .product_list_text p:nth-child(1) {
+        margin: 20px 0 10px 0;
+    }
+
+    .product_more_product_list ul li:hover .product_list_text p:nth-child(3) a {
+        color: rgba(0, 163, 254, 1);
+    }
+
+    .product_more_product_list ul li:hover .produt_list_box {
+        transition: 0.8s;
+        border-bottom: 5px solid rgba(0, 163, 254, 1);
+    }
+
+    .product_more_product_list ul li:hover .product_list_text p:nth-child(2) {
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .product_more_product_list ul li:hover .product_list_text {
+        transition: 0.5s;
+        height: 300px;
+    }
+
+    .product_button {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .product_button button a {
+        color: black;
+        text-decoration: none;
+
+
+    }
+
+    .product_button button {
+        width: 138px;
+        height: 44px;
+        line-height: 44px;
+        border: 1px solid;
+        border-color: #e4e4e4;
+        border: 1px solid rgba(228, 228, 228, 1);
+        outline: none;
+    }
+
+    .product_button button:hover {
+        transition: 0.5s;
+        background: rgba(0, 163, 254, 1);
+    }
+
+    .product_button button:hover a {
+        color: #fff;
+    }
+    @media(max-width:1450px) {
+        .product_more_product .product_title p {
+            width: 100%;
+        }
+        .product_more_product_list .produt_list_box {
+        margin: 0 0 0 0px;
+    }
+      /*产品列表*/
+        .produt_list_box {
+            width: 200px;
+            height: 212px;
+        }
+
+        .product_more_product_list ul li img {
+            height: 122px;
+        }
+
+        .product_more_product_list ul li:hover .produt_list_box img {
+            height: 122px;
+        }
+        .product_more_product_list .product_list_text {
+            height: 90px;
+        }
+
+        .product_more_product_list .product_list_text p:nth-child(1) {
+            margin: 10px 0 10px 0;
+        }
+
+        .product_more_product_list .product_list_text p:nth-child(2) {
+            display: none;
+        }
+
+        .product_more_product_list .product_list_text p:nth-child(3) {
+            margin: 0 0 0 62px;
+        }
+
+        .product_more_product_list ul li:hover .product_list_text p:nth-child(1) {
+            margin: 10px 0;
+        }
+  
+
+
+
+    }
+
+    
+
+    @media(max-width:768px) {
+        .product_more_product {
+            margin-top: 40px;
+        }
+
+        .product_more_product .product_title p {
+            margin-bottom: 6px;
+            height: 24px;
+            font-size: 18px;
+            ;
+        }
+
+        .product_more_product .product_title p:nth-child(2) {
+            display: block;
+            color: #999999;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /*产品列表*/
+        .product_more_product_list {
+            margin: 20px auto;
+        }
+
+        .product_more_product_list ul li {
+            margin-bottom: 20px;
+        }
+
+        .produt_list_box {
+            width: 158px;
+            height: 212px;
+        }
+
+        .product_more_product_list ul li img {
+            height: 122px;
+        }
+
+        .product_more_product_list ul li:hover .produt_list_box img {
+            height: 122px;
+        }
+        .product_more_product_list .product_list_text {
+            height: 90px;
+        }
+
+        .product_more_product_list .product_list_text p:nth-child(1) {
+            margin: 10px 0 10px 0;
+        }
+
+        .product_more_product_list .product_list_text p:nth-child(2) {
+            display: none;
+        }
+
+        .product_more_product_list .product_list_text p:nth-child(3) {
+            margin: 0 0 0 46px;
+        }
+
+        .product_more_product_list ul li:hover .product_list_text p:nth-child(1) {
+            margin: 10px 0;
+        }
+    }
+    @media(max-width:500px) {
+        .product_more_product_list ul li{
+            text-align: center;
+        }
+        .product_more_product_list .produt_list_box {
+        margin: 0 0 0 0px;
+        
+    }
+    }
+</style>
+
 <body>
+    <!--头部导航条-->
+    <div class="top">
+        <div class="top_nav public_width ">
+            <div class="top_logo"><a href="./index.html"><img src="./image/logo_pc.png" alt=""></a></div>
+            <div class="top_title">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">产品中心</a>
+                        <div class="product_center_bottom_list">
+                            <p><a href="#">全部产品</a></p>
+                            <p><a href="#">全部产品</a></p>
+                        </div>
+                    </li>
+                    <li><a href="#">关于公司</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <img src="./image/otherbanner_image.png" alt="">
+        <div class="banner_title">
+            <h2>产品中心</h2>
+            <p>不断升级创新</p>
+        </div>
+    </div>
+
+    <!-- 面包屑导航 -->
+    <div class="crumbs">
+        <div class="public_width">
+            <div class="breadcrumb">
+                <p>位置：</p>
+                <dl>
+                    <dd><a href="#"> 产品中心 </a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!--汉堡包-->
+    <div class="hamburger">
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+    <!--点击汉堡包之后，会出现全局的遮罩层-->
+    <div class="body_bg_ceng "> </div>
+
+    <!--更多产品-->
     <div class="product_more_product">
         <div class="product_title">
             <p>更多产品</p>
+            <p>新年新礼，新未来</p>
         </div>
         <div class="product_more_product_nav">
-            <ul>
+            <ul class="public_width">
                 <li><a href="#">全部产品</a></li>
                 <li><a href="#">职场助力</a></li>
                 <li><a href="#">学子优选</a></li>
@@ -27,37 +370,113 @@
             </ul>
         </div>
         <div class="product_more_product_list public_width">
-             <ul class="row">
-                 <li class="col-xl-3 col-lg-4 col-sm-6 col-12">
-                     <div class="produt_list_box">
-                          <div class="product_list_img">
-                              <img src="./image/product_image.png" alt="">
-                          </div>
-                          <div class="product_list_text">
-                              <p>Xbox One S</p>
-                              <p>rang afjsdoghud
-                                afjsdoghudsfhgjsdhguaeghudgh  afjsdoghudsfhgjsdhguaeghudgh  afjsdoghudsfhgjsdhguaeghudgh sfhgjsdhguaeghudgh aeu</p>
-                              <p>了解更多</p>
-                          </div>
-                     </div>
-                 </li>
-                 <li class="col-xl-3 col-lg-4 col-sm-6 col-12">
+            <ul class="row">
+                <li class="col-xl-3 col-lg-4  col-6">
                     <div class="produt_list_box">
+
                         <div class="product_list_img">
-                            <img src="./image/product_image.png" alt="">
+                            <img src="./image/product_center_playgame.png" alt="">
                         </div>
                         <div class="product_list_text">
-                      
+                            <p>Xbox One S</p>
+                            <p>让 Pro 为你更添助力。有史以来最强，Surface Pro 7 具有笔记本电脑级的 Intel® Core™ 处理器。</p>
+                            <p><a href="#">了解更多 </a> </p>
                         </div>
-                   </div>
-                 </li>
-                 <li class="col-xl-3 col-lg-4 col-sm-6 col-12"></li>
-                 <li class="col-xl-3 col-lg-4 col-sm-6 col-12"></li>
-             </ul>
+                    </div>
+
+
+                </li>
+                <li class="col-xl-3 col-lg-4  col-6">
+                    <div class="produt_list_box">
+                        <div class="product_list_img">
+                            <img src="./image/product_center_playgame.png" alt="">
+                        </div>
+                        <div class="product_list_text">
+                            <p>Xbox One S</p>
+                            <p>让 Pro 为你更添助力。有史以来最强，Surface Pro 7 具有笔记本电脑级的 Intel® Core™ 处理器。</p>
+                            <p> <a href="#">了解更多 </a> </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4  col-6">
+                    <div class="produt_list_box">
+                        <div class="product_list_img">
+                            <img src="./image/product_center_playgame.png" alt="">
+                        </div>
+                        <div class="product_list_text">
+                            <p>Xbox One S</p>
+                            <p>让 Pro 为你更添助力。有史以来最强，Surface Pro 7 具有笔记本电脑级的 Intel® Core™ 处理器。</p>
+                            <p><a href="#">了解更多 </a> </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4  col-6">
+                    <div class="produt_list_box">
+                        <div class="product_list_img">
+                            <img src="./image/product_center_playgame.png" alt="">
+                        </div>
+                        <div class="product_list_text">
+                            <p>Xbox One S</p>
+                            <p>让 Pro 为你更添助力。有史以来最强，Surface Pro 7 具有笔记本电脑级的 Intel® Core™ 处理器。</p>
+                            <p><a href="#">了解更多 </a> </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4  col-6">
+                    <div class="produt_list_box">
+                        <div class="product_list_img">
+                            <img src="./image/product_center_playgame.png" alt="">
+                        </div>
+                        <div class="product_list_text">
+                            <p>Xbox One S</p>
+                            <p>让 Pro 为你更添助力。有史以来最强，Surface Pro 7 具有笔记本电脑级的 Intel® Core™ 处理器。</p>
+                            <p><a href="#">了解更多 </a> </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4  col-6">
+                    <div class="produt_list_box">
+                        <div class="product_list_img">
+                            <img src="./image/product_center_playgame.png" alt="">
+                        </div>
+                        <div class="product_list_text">
+                            <p>Xbox One S</p>
+                            <p>让 Pro 为你更添助力。有史以来最强，Surface Pro 7 具有笔记本电脑级的 Intel® Core™ 处理器。</p>
+                            <p><a href="#">了解更多 </a> </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4  col-6">
+                    <div class="produt_list_box">
+                        <div class="product_list_img">
+                            <img src="./image/product_center_playgame.png" alt="">
+                        </div>
+                        <div class="product_list_text">
+                            <p>Xbox One S</p>
+                            <p>让 Pro 为你更添助力。有史以来最强，Surface Pro 7 具有笔记本电脑级的 Intel® Core™ 处理器。</p>
+                            <p><a href="#">了解更多 </a> </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xl-3 col-lg-4  col-6">
+                    <div class="produt_list_box">
+                        <div class="product_list_img">
+                            <img src="./image/product_center_playgame.png" alt="">
+                        </div>
+                        <div class="product_list_text">
+                            <p>Xbox One S</p>
+                            <p>让 Pro 为你更添助力。有史以来最强，Surface Pro 7 具有笔记本电脑级的 Intel® Core™ 处理器。</p>
+                            <p><a href="#">了解更多 </a> </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
+
     </div>
-    <div class="product_button public_width">
+    <div class="product_button ">
         <button><a href="#">更多产品</a></button>
     </div>
 </body>
+
 </html>

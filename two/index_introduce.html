@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 — 公司简介</title>
+    <link rel="stylesheet" href="./css/bootstrap4.5.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+</head>
+
+<style>
+    a{
+        text-decoration: none !important;
+    }
+    .index_introduce{
+        margin-top: 120px;
+    }
+    .index_introduce_title{
+        text-align: center;
+    }
+    .index_introduce_title h3{
+        font-size: 36px;
+        color: #3e3a36;
+        font-weight: bold;
+        font-family: Microsoft YaHei;
+    }
+    .index_introduce_title p{
+        display: block;
+        margin-top: 22px;
+        font-size: 14px;
+        color: #444444;
+        font-weight: regular;
+        font-family: Microsoft YaHei;
+    }
+    .index_introduce_content{
+        margin-top: 60px;
+    }
+    .index_introduce_img{
+        width: 621px;
+        height: 484px;
+        padding: 0px;
+    }
+    .index_introduce_img img{
+        max-width: 100%;
+        margin-left: 49px;
+    }
+    .index_introduce_text{
+        padding: 0px;
+    }
+    .index_introduce_text p{
+        margin-top: 55px;
+        font-size: 14px;
+        color: #444444;
+        font-family: Microsoft YaHei;
+    }
+    .index_introduce_text a{
+        display: block;
+        width: 100px;
+        height: 36px;
+        color: #ffffff;
+        font-size: 16px;
+        text-align: center;
+        line-height: 36px;
+        margin-top: 24px;
+        font-family: Microsoft YaHei;
+        background-color: #00a3fe;
+    }
+
+
+
+    @media (max-width:768px){
+        .index_introduce{
+            margin-top: 102px;
+        }
+        .index_introduce_title h3{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 37px;
+            line-height: 49px;
+            color: #444444;
+        }
+        .index_introduce_title p{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 29px;
+            line-height: 33px;
+            color: #999999;
+            margin-top: 12px;
+        }
+        .index_introduce_content{
+            margin-top: 41px;
+        }
+        .index_introduce_img{
+            margin: 0;
+            padding: 0 41px 0 41px;
+        }
+        .index_introduce_img img{
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+        .index_introduce_text{
+            padding: 37px 41px 0 41px;
+        }
+        .index_introduce_text p{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 27px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            margin: 0;
+            margin-bottom: 33px;
+            
+        }
+        .index_introduce_text .more a{
+            width: 123px;
+            height: 41px;
+            line-height: 41px;
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            display: block;
+            margin: auto;
+            font-size: 25px;
+        }
+    }
+
+    @media (max-width:600px){
+        .index_introduce{
+            margin-top: 80px;
+        }
+        .index_introduce_title h3{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 29px;
+            line-height: 38px;
+            color: #444444;
+        }
+        .index_introduce_title p{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 22px;
+            line-height: 26px;
+            color: #999999;
+            margin-top: 10px;
+        }
+        .index_introduce_content{
+            margin-top: 32px;
+        }
+        .index_introduce_img{
+            height: 403px;
+            margin: 0;
+            padding: 0 32px 0 32px;
+        }
+        .index_introduce_img img{
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+        .index_introduce_text{
+            padding: 29px 32px 0 32px;
+        }
+        .index_introduce_text p{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 21px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            margin: 0;
+            margin-bottom: 25px;
+        }
+        .index_introduce_text .more a{
+            width: 96px;
+            height: 32px;
+            line-height: 32px;
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            display: block;
+            margin: auto;
+            font-size: 19px;
+        }
+    }
+
+    @media (max-width:450px){
+        .index_introduce{
+            margin-top: 60px;
+        }
+        .index_introduce_title h3{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 22px;
+            line-height: 29px;
+            color: #444444;
+        }
+        .index_introduce_title p{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 17px;
+            line-height: 19px;
+            color: #999999;
+            margin-top: 7px;
+        }
+        .index_introduce_content{
+            margin-top: 24px;
+        }
+        .index_introduce_img{
+            height: 302px;
+            margin: 0;
+            padding: 0 24px 0 24px;
+        }
+        .index_introduce_img img{
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+        .index_introduce_text{
+            padding: 22px 24px 0 24px;
+        }
+        .index_introduce_text p{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            margin: 0;
+            margin-bottom: 19px;
+            
+        }
+        .index_introduce_text .more a{
+            width: 72px;
+            height: 24px;
+            line-height: 24px;
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            display: block;
+            margin: auto;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width:375px){
+        .index_introduce{
+            margin-top: 50px;
+        }
+        .index_introduce_title h3{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 18px;
+            line-height: 24px;
+            color: #444444;
+        }
+        .index_introduce_title p{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 14px;
+            line-height: 16px;
+            color: #999999;
+            margin-top: 6px;
+        }
+        .index_introduce_content{
+            margin-top: 20px;
+        }
+        .index_introduce_img{
+            height: 252px;
+            margin: 0;
+            padding: 0 20px 0 20px;
+        }
+        .index_introduce_img img{
+            max-width: 100%;
+            display: block;
+            margin: auto;
+        }
+        .index_introduce_text{
+            padding: 18px 20px 0 20px;
+        }
+        .index_introduce_text p{
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            font-size: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            margin: 0;
+            margin-bottom: 16px;
+            
+        }
+        .index_introduce_text .more a{
+            width: 60px;
+            height: 20px;
+            line-height: 20px;
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            display: block;
+            margin: auto;
+            font-size: 12px;
+        }
+    }
+</style>
+
+<body>
+    <!-- 首页-公司简介 -->
+    <div class="index_introduce">
+        <div class="public_width">
+            <div class="row">
+                <div class="index_introduce_title col-xl-12 col-12">
+                    <h3>公司简介</h3>
+                    <p>新年新礼，新未来</p>
+                </div>
+            </div>    
+            <div class="index_introduce_content row">
+                <div class="index_introduce_img col-xl-6 col-12">
+                    <img src="./image/index_introduce.png" alt="">
+                </div>
+                <div class="index_introduce_text col-xl-6 col-12">
+                    <p>微软 (英文名称:Microsoft;中文名称:微软公司或美国微软公司)是一家美国跨国科技公司，也是世界PC(Personal Computer，个人计算机)软件开发的先导，由比尔·盖茨与保罗·艾伦创办于1975年，公司总部设立在华盛顿州的雷德蒙德(Redmond，邻近西雅图)。以研发、制造、授权和提供广泛的电脑软件服务业务为主。
+                        <br>
+                        <br>
+                        最为著名和畅销的产品为Microsoft Windows操作系统和Microsoft Office系列软件，目前是全球最大的电脑软件提供商。</p>
+                    <div class="more">
+                        <a href="">了解更多</a>
+                    </div>
+                        
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

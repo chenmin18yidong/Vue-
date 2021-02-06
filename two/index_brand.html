@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 — 合作品牌</title>
+    <link rel="stylesheet" href="./css/bootstrap4.5.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+</head>
+<style>
+    li {
+        list-style: none;
+    }
+
+    .index_brand {
+        margin-top: 120px;
+    }
+    .index_brand .row{
+        margin: 0;
+    }
+    .index_brand_title {
+        text-align: center;
+    }
+
+    .index_brand_title h2 {
+        font-size: 36px;
+        font-weight: bold;
+        color: #3e3a36;
+        font-family: Microsoft YaHei;
+    }
+
+    .index_brand_title p {
+        display: block;
+        margin-top: 22px;
+        color: #444444;
+        font-size: 14px;
+        font-family: Microsoft YaHei;
+    }
+
+    .index_brand_list {
+        margin: auto;
+        padding: 62px 0 0 0;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .index_brand_list ul li{
+        width: 327px;
+        height: 124px;
+    }
+
+    .index_brand_list_img img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+
+    @media (max-width:768px){
+        .index_brand_title h2{
+            font-size: 18px;
+        }
+        .index_brand_title p {
+            font-size: 12px;
+        }
+        .index_brand_list ul li:nth-child(3),
+        .index_brand_list ul li:nth-child(4){
+            margin-top: 10px;
+        }
+    }
+
+    @media (max-width:460px){
+        .index_brand_list ul li{
+            height: 62px;
+        }
+    }
+
+    @media (max-width:375px){
+        .index_brand_list ul li{
+            height: 62px;
+        }
+    }
+</style>
+
+<body>
+    <!-- 首页-合作品牌 -->
+    <div class="index_brand">
+        <div class="public_width">
+            <div class="row">
+                <div class="index_brand_title col-xl-12 col-12">
+                    <h2>合作品牌</h2>
+                    <p>新年新礼，新未来</p>
+                </div>
+            </div>    
+            <div class="index_brand_list">
+                <ul class="row">
+                    <li class="index_brand_list_img col-xl-3 col-6">
+                        <img src="./image/index_cooperate_1.png" alt="">
+                    </li>
+
+                    <li class="index_brand_list_img col-xl-3 col-6">
+                        <img src="./image/index_cooperate_2.png" alt="">
+                    </li>
+
+                    <li class="index_brand_list_img col-xl-3 col-6">
+                        <img src="./image/index_cooperate_3.png" alt="">
+                    </li>
+
+                    <li class="index_brand_list_img col-xl-3 col-6">
+                        <img src="./image/index_cooperate_4.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

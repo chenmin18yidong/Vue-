@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页-新闻资讯</title>
+    <link rel="stylesheet" href="./css/bootstrap4.5.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+</head>
+
+<style>
+    a {
+        text-decoration: none !important;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .index_news {
+        margin-top: 120px;
+    }
+
+    .index_news_title {
+        text-align: center;
+    }
+
+    .index_news_title h3 {
+        font-size: 36px;
+        font-weight: 700;
+        color: #3e3a36;
+        font-family: Microsoft YaHei;
+    }
+
+    .index_news_list {
+        margin-top: 96px;
+    }
+
+    .index_news_title p {
+        font-size: 14px;
+        color: #444444;
+        margin-top: 22px;
+        font-family: Microsoft YaHei;
+    }
+
+    .index_news_list ul li {
+        padding: 0px;
+
+    }
+
+    .index_news_list .index_news_item a {
+        display: block;
+        height: 430px;
+        border: 1px solid #dfe2eb;
+        padding: 0;
+    }
+
+    .index_news_list .index_news_item a:hover {
+        border-bottom: 3px solid #00a3fe;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.16);
+    }
+
+    .index_news_item_img {
+        display: block;
+        margin: auto;
+        width: 400px;
+        height: 250px;
+        margin-top: 20px;
+    }
+
+    .index_news_item_img img {
+        max-width: 100%;
+    }
+
+    .index_news_item_title {
+        display: block;
+        margin: 18px 0 0 20px;
+        color: #444444;
+        font-size: 22px;
+        font-weight: regular;
+        font-family: Microsoft YaHei;
+    }
+
+    .index_news_item a .index_news_item_text {
+        margin: auto;
+        margin-top: 18px;
+        width: 400px;
+        font-size: 14px;
+        color: #444444;
+        font-weight: regular;
+        font-family: Microsoft YaHei;
+    }
+
+    .index_news_item_time {
+        display: block;
+        margin: 18px 0 0 20px;
+        font-size: 14px;
+        color: #444444;
+        font-weight: regular;
+        font-family: Microsoft YaHei;
+    }
+
+
+    @media (max-width:768px) {
+        .index_news {
+            margin-top: 82px;
+        }
+        .index_news_title h3 {
+            font-size: 33px;
+            color: #444444;
+            line-height: 49px;
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+        }
+        .index_news_title p {
+            font-size: 20px;
+            color: #999999;
+            line-height: 33px;
+            font-weight: regular;
+            font-family: Microsoft YaHei;
+            margin-top: 13px;
+        }
+        .index_news_list {
+            margin-top: 55px;
+        }
+
+        .index_news_list .index_news_item a{
+            height: 205px;
+            border: 1px solid #dfe2eb;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .index_news_item_img{
+            width: 240px;
+            height: 164px;
+            /* max-width: none; */
+        }
+        .index_news_item_img img{
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+    <!-- 首页-新闻资讯 -->
+    <div class="index_news">
+        <div class="public_width">
+
+            <div class="row">
+                <div class="index_news_title col-12">
+                    <h3>新闻资讯</h3>
+                    <p>新年新礼，新未来</p>
+                </div>
+            </div>
+
+            <ul class="index_news_list row">
+                <li class="index_news_item col-xl-4 col-12">
+                    <a href="">
+                        <div class="index_news_item_img">
+                            <img src="./image/index_news_1.png" alt="">
+                        </div>
+                        <div class="index_news_text">
+                            <p class="index_news_item_title">收购诺基亚</p>
+                            <div class="index_news_item_text">
+                                <span>2014年4月21日晚，诺基亚对外宣布，预计将于4月25日完成将设备业务出售给微软的交易。针对交易完成后诺基......</span>
+                            </div>
+                            <p class="index_news_item_time">2014-04-12</p>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li class="index_news_item col-xl-4 col-12">
+                    <a href="">
+                        <div class="index_news_item_img">
+                            <img src="./image/index_news_1.png" alt="">
+                        </div>
+                        <div class="index_news_text">
+                            <p class="index_news_item_title">收购诺基亚</p>
+                            <div class="index_news_item_text">
+                                <span>2014年4月21日晚，诺基亚对外宣布，预计将于4月25日完成将设备业务出售给微软的交易。针对交易完成后诺基......</span>
+                            </div>
+                            <p class="index_news_item_time">2014-04-12</p>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li class="index_news_item col-xl-4 col-12">
+                    <a href="">
+                        <div class="index_news_item_img">
+                            <img src="./image/index_news_1.png" alt="">
+                        </div>
+                        <div class="index_news_text">
+                            <p class="index_news_item_title">收购诺基亚</p>
+                            <div class="index_news_item_text">
+                                <span>2014年4月21日晚，诺基亚对外宣布，预计将于4月25日完成将设备业务出售给微软的交易。针对交易完成后诺基......</span>
+                            </div>
+                            <p class="index_news_item_time">2014-04-12</p>
+                        </div>
+
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>

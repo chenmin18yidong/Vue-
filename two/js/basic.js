@@ -33,7 +33,7 @@ $(window).bind( "scroll" , function () {
        $(".top").css({
            "background":"#fff",
            "position":"fixed",
-             "height":"80px",
+            "height":"70px",
            "border-bottom":"1px solid #e0eff3"
        })
     } 
