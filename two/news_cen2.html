@@ -42,20 +42,17 @@
         object-fit: cover;
     }
 
-    .news_cen2_list_text {}
-
     .news_cen2_list_text p:nth-child(1) {
         color: #444;
         font-size: 20px;
         line-height: 32px;
-        line-height: normal;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
 
     .news_cen2_list_text p:nth-child(2) {
-        width: 980px;
+        max-width: 980px;
         color: #999;
         font-size: 14px;
         line-height: 24px;
@@ -75,19 +72,50 @@
 
     /* 移动端 */
     @media screen and (max-width: 768px) {
+
+        /* 内容 */
         .news_cen2_list ul li {
             margin-bottom: 20px;
         }
 
-        .news_cen2_list_img {
-            width: 244px;
-            height: 172px;
-            margin-right: 12px;
+        .news_cen2_list_text {
+            max-width: 300px;
+            border-bottom: 1px solid #dfe2eb;
         }
 
+    }
+
+    @media screen and (max-width: 580px) {
+
+        /* 内容 */
         .news_cen2_list_text {
-            width: 215px;
-            border-bottom: 1px solid #dfe2eb;
+            max-width: 250px;
+        }
+
+        .news_cen2_list_img {
+            height: 174px;
+        }
+
+        .news_cen2_list_text p:nth-child(1) {
+            font-size: 18px;
+        }
+
+        .news_cen2_list_text p:nth-child(2) {
+            font-size: 14px;
+            margin: 10px 0 10px;
+        }
+
+    }
+
+    @media screen and (max-width: 425px) {
+
+        /* 内容 */
+        .news_cen2_list_text {
+            max-width: 200px;
+        }
+
+        .news_cen2_list_img {
+            height: 130px;
         }
 
         .news_cen2_list_text p:nth-child(1) {
@@ -95,20 +123,21 @@
         }
 
         .news_cen2_list_text p:nth-child(2) {
-            width: 197px;
             font-size: 13px;
-            margin: 0px;
             line-height: normal;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
+            margin: 0;
         }
+
 
     }
 
     @media screen and (max-width: 375px) {
+
+        /* 列表 */
+        .news_cen2_list {
+            margin: 20px 0;
+        }
+
         .news_cen2_list ul li {
             margin-bottom: 20px;
         }
@@ -120,19 +149,17 @@
         }
 
         .news_cen2_list_text {
-            width: 215px;
-            border-bottom: 1px solid #dfe2eb;
-
+            max-width: 210px;
         }
 
         .news_cen2_list_text p:nth-child(1) {
             font-size: 16px;
+            line-height: normal;
         }
 
         .news_cen2_list_text p:nth-child(2) {
-            width: 197px;
             font-size: 13px;
-            margin: 0px;
+            margin: 0;
             line-height: normal;
             overflow: hidden;
             text-overflow: ellipsis;

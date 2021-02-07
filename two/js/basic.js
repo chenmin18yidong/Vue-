@@ -33,7 +33,6 @@ $(window).bind( "scroll" , function () {
        $(".top").css({
            "background":"#fff",
            "position":"fixed",
-            "height":"70px",
            "border-bottom":"1px solid #e0eff3"
        })
     } 
@@ -41,10 +40,14 @@ $(window).bind( "scroll" , function () {
         $(".top").css("background","none")
         $(".top").css("position","static")
     }  
-    if($(window).width() < 376){
+    if($(window).width() < 768){
         $(".top").css({
               "height":"44px",
-        }),1
+        })
+    }else{
+        $(".top").css({
+            "height":"70px",
+      })
     }
 }); 
  var wow = new WOW({

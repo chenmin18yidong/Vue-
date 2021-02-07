@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,21 +10,26 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/bootstrap4.5.min.css">
 </head>
+
 <body>
+    <!-- 当页面不是index时，底部还需要加上simple_footer样式 -->
     <footer class="footer">
-        <ul class="friendly public_width">
-            <li>友情链接：</li>
-            <li><a href="#">友情链接</a></li>
-            <li><a href="#">友情链接</a></li>
-            <li><a href="#">友情链接</a></li>
-            <li><a href="#">友情链接</a></li>
-            <li><a href="#">友情链接</a></li>
-            <li><a href="#">友情链接</a></li>
-        </ul>
+        <div class="friendly_spacing">
+            <ul class="friendly  public_width">
+                <li>友情链接：</li>
+                <li><a href="#">友情链接</a></li>
+                <li><a href="#">友情链接</a></li>
+                <li><a href="#">友情链接</a></li>
+                <li><a href="#">友情链接</a></li>
+                <li><a href="#">友情链接</a></li>
+                <li><a href="#">友情链接</a></li>
+            </ul>
+        </div>
+
         <div class="public_width footer_nav">
             <div class="footer_nav_logo">
-                <img src="image/index_top_logo.png" alt="">
-                <span>“超快排”—— 网站关键词seo快排系统</span>
+                <a href=""><img src="image/index_top_logo.png" alt=""></a>
+                <a href=""><span>“超快排”—— 网站关键词seo快排系统</span></a>
             </div>
             <div class="footer_nav_link">
                 <ul>
@@ -37,15 +43,18 @@
                 <span>关注官方微信</span>
                 <img src="image/footer_wx.png" alt="">
                 <span>服务热线</span>
-                <span id="footer_hotline">400 820 8820</span>
+                <span><a href="" id="footer_hotline">400 820 8820</a> </span>
             </div>
         </div>
-        <div class="record public_width">
-            <div>
-                <span class="copyright">桂ICP备15006671号-2</span>
-                <span>© 2009-2020 超快排是一款刷百度关键词排名、360关键词排名、搜狗、以及神马关键词快速排名的seo优化软件！</span>
+        <div class="border_spacing">
+            <div class="record public_width">
+                <div>
+                    <span class="copyright">桂ICP备15006671号-2</span>
+                    <span>© 2009-2020 超快排是一款刷百度关键词排名、360关键词排名、搜狗、以及神马关键词快速排名的seo优化软件！</span>
+                </div>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

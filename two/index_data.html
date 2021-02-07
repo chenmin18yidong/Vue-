@@ -35,14 +35,14 @@
         margin: auto;
         margin-top: 75px;
     }
-    .index_data_content ul li{
+    .index_data_content li{
         padding: 0px;
         width: 350px;
         height: 200px;
         border: 1px solid #e4e4e4;
         background-color: #ffffff;
     }
-    .index_data_content ul li p{
+    .index_data_content li p{
         font-size: 46px;
         font-weight: bold;
         color: #00a3fe;
@@ -50,7 +50,7 @@
         margin-top: 49px;
         font-family: Microsoft YaHei;
     }
-    .index_data_content ul li span{
+    .index_data_content li span{
         display: block;
         text-align: center;
         margin-top: 16px;
@@ -58,40 +58,176 @@
         color: #444444;
         font-family: Microsoft YaHei;
     }
+
+
+    @media (max-width:768px){
+        .public_width{
+            padding: 0px;
+        }
+        .index_data{
+            margin-top: 60px;
+            width: 100%;
+            height: 110px;   
+            background-color: #2b2b2b;
+        }
+        .index_data_title{
+            margin: 0px !important;
+        }
+        .index_data_title h2{
+            display: block;
+            margin-top: 31px;
+            font-size: 33px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            font-family: Microsoft YaHei;
+        }
+        .index_data_content{
+            margin-top: 40px;
+        }
+        .index_data_content li{
+            height: 123px;
+        }
+        .index_data_content li p{
+            font-size: 33px;
+            font-weight: bold;
+            color: #00a3fe;
+            text-align: center;
+            margin-top: 25px;
+            font-family: Microsoft YaHei;
+        }
+        .index_data_content li span{
+            display: block;
+            text-align: center;
+            margin-top: 2px;
+            font-size: 25px;
+            color: #444444;
+            font-family: Microsoft YaHei;
+        }
+    }
+
+    @media (max-width:600px){
+        .index_data{
+            margin-top: 60px;
+            width: 100%;
+            height: 110px;   
+            background-color: #2b2b2b;
+        }
+        .index_data_title{
+            margin: 0px !important;
+        }
+        .index_data_title h2{
+            display: block;
+            margin-top: 31px;
+            font-size: 26px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            font-family: Microsoft YaHei;
+        }
+        .index_data_content{
+            margin-top: 40px;
+        }
+        .index_data_content li{
+            height: 96px;
+        }
+        .index_data_content li p{
+            font-size: 26px;
+            font-weight: bold;
+            color: #00a3fe;
+            text-align: center;
+            margin-top: 19px;
+            font-family: Microsoft YaHei;
+        }
+        .index_data_content li span{
+            display: block;
+            text-align: center;
+            margin-top: 2px;
+            font-size: 19px;
+            color: #444444;
+            font-family: Microsoft YaHei;
+        }
+    }
+
+    @media (max-width:450px){
+        
+        .index_data{
+            margin-top: 48px;
+            width: 100%;
+            height: 110px;   
+            background-color: #2b2b2b;
+        }
+        .index_data_title{
+            margin: 0px !important;
+        }
+        .index_data_title h2{
+            display: block;
+            margin-top: 18px;
+            /* line-height: 110px; */
+            font-size: 19px;
+            font-weight: bold;
+            text-align: center;
+            color: #ffffff;
+            font-family: Microsoft YaHei;
+        }
+        .index_data_content{
+            margin-top: 40px;
+        }
+        .index_data_content li{
+            height: 72px;
+        }
+        .index_data_content li p{
+            font-size: 19px;
+            font-weight: bold;
+            color: #00a3fe;
+            text-align: center;
+            margin-top: 15px;
+            font-family: Microsoft YaHei;
+        }
+        .index_data_content li span{
+            display: block;
+            text-align: center;
+            margin-top: 1px;
+            font-size: 14px;
+            color: #444444;
+            font-family: Microsoft YaHei;
+        }
+    }
 </style>
 
 <body>
     <!-- 首页-数据 -->
     <div class="index_data">
         <div class="public_width">
-            <div class="row">
-                <div class="index_data_title col-xl-12 col-12">
+            <div class="index_data_title row">
+                <div class="index_data_title_h2 col-12">
                     <h2>世界PC软件开发先导者，客户遍及全球</h2>
                 </div>
-                <div class="index_data_content">
-                    <ul class="row">
-                        <li class="col-xl-3 col-sm-6 ">
-                            <p>15亿</p>
-                            <span>全球客户超过</span>
-                        </li>
-
-                        <li class="col-xl-3 col-sm-6 ">
-                            <p>1500亿</p>
-                            <span>总销售额突破</span>
-                        </li>
-
-                        <li class="col-xl-3 col-sm-6 ">
-                            <p>2000项</p>
-                            <span>拥有有效授权专利</span>
-                        </li>
-
-                        <li class="col-xl-3 col-sm-6 ">
-                            <p>2000个</p>
-                            <span>拥有产品</span>
-                        </li>
-                    </ul>
-                </div>
             </div>
+            <!-- <div class=" "> -->
+                <ul class="index_data_content row">
+                    <li class="col-xl-3 col-6 ">
+                        <p>15亿</p>
+                        <span>全球客户超过</span>
+                    </li>
+
+                    <li class="col-xl-3 col-6 ">
+                        <p>1500亿</p>
+                        <span>总销售额突破</span>
+                    </li>
+
+                    <li class="col-xl-3 col-6 ">
+                        <p>2000项</p>
+                        <span>拥有有效授权专利</span>
+                    </li>
+
+                    <li class="col-xl-3 col-6 ">
+                        <p>2000个</p>
+                        <span>拥有产品</span>
+                    </li>
+                </ul>
+            <!-- </div> -->
+            
         </div>
     </div>
 </body>

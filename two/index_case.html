@@ -87,11 +87,6 @@
         object-fit: cover;
     }
 
-    .index_case_con_rig_txt {
-        width: 396px;
-        height: 95px;
-    }
-
     .index_case_con_rig_txt p {
         color: #444;
         font-size: 22px;
@@ -99,6 +94,7 @@
     }
 
     .index_case_con_rig_txt span {
+        max-width: 396px;
         color: #444;
         font-size: 14px;
         overflow: hidden;
@@ -137,20 +133,20 @@
         }
 
         /* 左 */
-        .index_case_con_lef {
+        .index_case_con_lef,
+        .index_case_con_rig ul li {
             display: flex;
             border: 1px solid #dfe2eb;
-            margin: auto;
             padding: 10px;
             box-shadow: 0px 3px 6px rgba(68, 68, 68, 0.2);
         }
 
+        .index_case_con_lef {
+            margin: auto;
+        }
+
         .index_case_con_rig ul li {
-            display: flex;
-            border: 1px solid #dfe2eb;
             margin-bottom: 20px;
-            padding: 10px;
-            box-shadow: 0px 3px 6px rgba(68, 68, 68, 0.2);
         }
 
         .index_case_con_lef_img,
@@ -161,9 +157,18 @@
 
         }
 
-        .index_case_con_lef_txt span,
         .index_case_con_rig_txt p {
+            margin: 22px 0 28px;
+        }
+
+        .index_case_con_lef_txt span,
+        .index_case_con_rig_txt span {
             max-width: 438px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
         }
 
         /* 右 */
@@ -172,22 +177,43 @@
         }
     }
 
-    @media screen and (max-width: 460px) {
-        .index_case_con_lef_img {
-            margin-right: 18px;
-            width: 218px;
-        }
+    @media screen and (max-width: 375px) {
 
+        /* 标题 */
         .news_cen1_title h2 {
-            font-size: 22px;
+            font-size: 18px;
         }
 
         .news_cen1_title p {
-            margin-top: 14px;
+            margin-top: 6px;
         }
-    }
 
-   
+        /* 内容 */
+        .index_case_con_lef_img,
+        .index_case_con_rig_img {
+            width: 117px;
+            height: 80px;
+            margin-right: 20px;
+        }
+
+        .index_case_con_lef_txt p,
+        .index_case_con_rig_txt p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .index_case_con_lef_txt span,
+        .index_case_con_rig_txt span {
+            width: 185px;
+            font-size: 13px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+    }
 </style>
 
 <body>
