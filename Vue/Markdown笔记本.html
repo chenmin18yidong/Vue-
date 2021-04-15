@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook</title>
+    <script src="./js/vue.js"></script>
+    <!-- 添加 Marked 库： --> 
+    <script src="https://unpkg.com/marked"></script> 
+</head>
+<body>
+    <div id="notebook">
+         <!--主面板-->
+         <section class="main">
+           <textarea v-model="content" name="" id="" cols="30" rows="10"></textarea>
+         </section>
+
+         <aside class="preview" v-html="notePreview">
+         </aside>
+    </div>
+    <!-- <div id="timer" style="color:red">
+    </div> <div id="warring" style="color:red"></div> -->
+
+      <script>
+             //新建一个Vue 实例
+             new Vue({
+                 
+                 el:'#notebook',
+                 
+                 //计算属性
+                 computed:{
+                    notePreview(){
+                        //markdown 渲染为HTML
+                        return marked(this.content)
+                    },
+                 },
+                 //一些数据
+                 data(){
+                     return{
+                         content:"this  is a note",
+                     }  
+                 },
+                 
+                 
+             })
+      </script>
+          
+
+      <!-- <script>
+                    const html = marked('**Bold** *Italic* [link] (http://vuejs.org/)')
+        console.log(html)
+      </script> -->
+
+      <!-- <SCRIPT type="text/javascript">        
+                    var maxtime = 60 * 60; //一个小时，按秒计算，自己调整!   
+                     function CountDown() {
+                         if (maxtime >= 0) {
+                           minutes = Math.floor(maxtime / 60);
+                           seconds = Math.floor(maxtime % 60);
+                           msg = "距离结束还有" + minutes + "分" + seconds + "秒";
+                           document.all["timer"].innerHTML = msg;
+                           if (maxtime == 5 * 60)alert("还剩5分钟");
+                               --maxtime;
+                       } else{
+                           clearInterval(timer);
+                           alert("时间到，结束!");
+                       }
+                   }
+                   timer = setInterval("CountDown()", 1000);                
+               </SCRIPT> -->
+
+<!-- <p>未查询到登录信息,即将跳转...<span id='countDown_time'></span></p>
+<script type='text/javascript'>
+    var countdown=60;
+    settime();
+    function settime() {
+        if (countdown == 0) {
+            window.location.href='login.html';
+        } else {
+        document.getElementById('countDown_time').innerText= countdown;
+            countdown--;
+            setTimeout(function() {
+                settime();
+            },1000)
+        }
+    }
+</script> -->
+</body>
+</html>
