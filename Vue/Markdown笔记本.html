@@ -1,90 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Notebook</title>
     <script src="./js/vue.js"></script>
-    <!-- 添加 Marked 库： --> 
-    <script src="https://unpkg.com/marked"></script> 
-</head>
-<body>
+    <!-- 添加 Marked 库： -->
+    <script src="https://unpkg.com/marked"></script>
+  </head>
+  <body>
+    <!--笔记本应用
+      id  笔记的唯一标识符
+      title 笔记的标题，用来显示在笔记列表
+      content 笔记的markdown格式内容
+      created  笔记创建的日期
+      favorite 用来表示是否收藏了笔记，-->
     <div id="notebook">
-         <!--主面板-->
-         <section class="main">
-           <textarea v-model="content" name="" id="" cols="30" rows="10"></textarea>
-         </section>
+      <!--侧边栏-->
+      <aside class="side-bar">
+        <!--这里是笔记本列表-->
+        <!--工具栏-->
+        <div class="toolbar">
+          <!--添加笔记按钮-->
+          <button :title="addButtonTitle"></button>
+          <button @click="addNote">
+            <i class="material-icons">+</i> Add note
+          </button>
+        </div>
+        <div class="notes">
+          <!--笔记列表显示在这里-->
+          <div class="note" v-for="note of notes" @click="selectedId(note)">
+            {{note.title}}
+          </div>
+        </div>
+      </aside>
 
-         <aside class="preview" v-html="notePreview">
-         </aside>
+      <!--主面板-->
+      <section class="main">
+        <textarea
+          v-model="selectNote.content"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
+      </section>
+
+      <aside class="preview" v-html="notePreview"></aside>
     </div>
-    <!-- <div id="timer" style="color:red">
-    </div> <div id="warring" style="color:red"></div> -->
 
-      <script>
-             //新建一个Vue 实例
-             new Vue({
-                 
-                 el:'#notebook',
-                 
-                 //计算属性
-                 computed:{
-                    notePreview(){
-                        //markdown 渲染为HTML
-                        return marked(this.content)
-                    },
-                 },
-                 //一些数据
-                 data(){
-                     return{
-                         content:"this  is a note",
-                     }  
-                 },
-                 
-                 
-             })
-      </script>
-          
+    <script>
+      //新建一个Vue 实例
+      new Vue({
+        el: "#notebook",
 
-      <!-- <script>
-                    const html = marked('**Bold** *Italic* [link] (http://vuejs.org/)')
-        console.log(html)
-      </script> -->
+        //一些数据
+        data() {
+          return {
+            content: localStorage.getItem("content") || "you can write in",
+            //新的  一个笔记数组
+            notes: [],
+          };
+        },
+        //计算属性
+        computed: {
+          notePreview() {
+            //markdown 渲染为HTML
+            return this.selectNote ? marked(this.selectNote.content): ''
+          },
+          addButtonTitle() {
+            return this.notes.length + "条数据";
+          },
+          selectNote(){
+            //返回与selectedId匹配的笔记
+            return this.notes.find(note => note.id === this.selectedId)
+          }
+        },
 
-      <!-- <SCRIPT type="text/javascript">        
-                    var maxtime = 60 * 60; //一个小时，按秒计算，自己调整!   
-                     function CountDown() {
-                         if (maxtime >= 0) {
-                           minutes = Math.floor(maxtime / 60);
-                           seconds = Math.floor(maxtime % 60);
-                           msg = "距离结束还有" + minutes + "分" + seconds + "秒";
-                           document.all["timer"].innerHTML = msg;
-                           if (maxtime == 5 * 60)alert("还剩5分钟");
-                               --maxtime;
-                       } else{
-                           clearInterval(timer);
-                           alert("时间到，结束!");
-                       }
-                   }
-                   timer = setInterval("CountDown()", 1000);                
-               </SCRIPT> -->
+        watch: {
+          // 侦听content数据属性
+          content(val, oldvar) {
+            //val新的数据   oldval旧的数据
+            console.log("new note:", "old note", oldvar);
+            console.log("saving note:", this.content);
+            localStorage.setItem("content", this.content);
+          },
+        },
 
-<!-- <p>未查询到登录信息,即将跳转...<span id='countDown_time'></span></p>
-<script type='text/javascript'>
-    var countdown=60;
-    settime();
-    function settime() {
-        if (countdown == 0) {
-            window.location.href='login.html';
-        } else {
-        document.getElementById('countDown_time').innerText= countdown;
-            countdown--;
-            setTimeout(function() {
-                settime();
-            },1000)
-        }
-    }
-</script> -->
-</body>
+        methods: {
+          savaNote() {
+            console.log("saving note", this.content);
+            localStorage.setItem("content", this.content);
+          },
+          reportOpreraton(opName) {
+            console.log("The", opName, "operation was conpleted");
+          },
+          //用一些默认值添加一条笔记，并将其添加到笔记数组中
+          addNote() {
+            const time = Date.now();
+            //新笔记的默认值
+            const note = {
+              id: String(time),
+              title: "new  note" + (this.notes.lenght + 1),
+              content: "**Hi!** This notebook",
+              created: time,
+              favorite: false,
+            };
+            //添加到列表中
+            this.notes.push(note);
+          },
+          selectNote(note) {
+            this.selectedId = note.id;
+          },
+        },
+        //当实例准备就绪就会调用这个勾子
+        created() {
+          //将content设置为储存的内容
+          //如果没有保存任何内容，则设置为一个默认字符串
+          this.content =
+            localStorage.getItem("content") || "you can write in markdown";
+        },
+      });
+      console.log("aaa note:", localStorage.getItem("content"));
+    </script>
+  </body>
 </html>
