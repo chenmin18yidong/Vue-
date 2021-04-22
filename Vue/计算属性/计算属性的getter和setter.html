@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>计算属性的复杂操作</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>{{fullName}}</h2>
+      <h2>{{fuNmae}}</h2>
+    </div>
+    <script src="../js/vue.js"></script>
+
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          fristName: "刘",
+          lastName: "三",
+        },
+
+        /*计算属性，一般没有set方法，只读属性*/
+        computed: {
+          /*这个是简写*/
+             fuNmae:function(){
+              return this.fristName + this.lastName
+          },
+
+          fullName: {
+            /*其实就是一个属性，他的对象是一个get和一个set方法*/
+
+            /*一般都是实现get方法，set一般是空的   如果要使用，有自己的值  叫做newvelue*/
+            set: function (newValue) {
+              //    console.log(" ---",newValue)
+              const names = newValue.split("  "); /*中间按空格，将这个分割为数组   一个空格是一个数组，两个数组就打两个空格*/
+              this.fristName = names[0];
+              this.lastName = names[1];
+            },
+            get: function () {
+              return this.fristName + this.lastName;
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

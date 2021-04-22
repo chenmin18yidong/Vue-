@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>计算属性的基本使用</title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+        <h2>{{fristName + lastName}}</h2>
+      <h2>{{getfullName()}}</h2>
+      <h2>{{fullName}}</h2><!--计算属性的方法，就是把函数当做一个属性去用，不用在后面加括号-->
+    </div>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          fristName: "张",
+          lastName: "三",
+        },
+        /*计算属性*/
+        computed:{ 
+            fullName:function(){
+                return this.fristName + " " + this.lastName;
+            }
+
+        },
+        /*方法*/
+        methods: {
+          getfullName() {
+            return this.fristName + " " + this.lastName;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

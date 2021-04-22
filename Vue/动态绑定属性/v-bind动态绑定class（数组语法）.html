@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>v-bind动态绑定class</title>
     <script src="../js/vue.js"></script>
+    <style>
+        .one{
+            font-size: 28px;
+        }
+        .two{
+            color:blue;
+        }
+    </style>
 </head>
 <body>
       <div id="app">
-          <h2 v-bind:class="[active,line]">{{message}}</h2><!--数组语法  加上引号就是字符串，如果不加，就是变量，会把其值存入其中--> 
-          <h2 v-bind:class="getClasses()">{{message}}</h2><!--数组语法  加上引号就是字符串，如果不加，就是变量，会把其值存入其中--> 
+          <h2 :class="[active, line]">{{message}}</h2><!--数组语法  加上引号就是字符串，如果不加，就是变量，会把其值存入其中--> 
+          <h2 :class="getClasses()">{{message}}</h2><!--数组语法  加上引号就是字符串，如果不加，就是变量，会把其值存入其中--> 
           
         </div>
      <script>
@@ -18,8 +26,8 @@
              el:"#app",
              data:{
                  message:"你好啊",
-                 active:"aaa",
-                 line:"bb"
+                 active:"one",
+                 line:"two"
              },
              methods:{
                  getClasses:function(){
