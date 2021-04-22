@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on的基本使用</title>
+</head>
+<style>
+    
+</style>
+<body>
+    <div id="app">
+        <h2>{{counter}}</h2>
+        <!--v-on：click   简写为  @click-->
+
+        <!--1.事件监听的时候
+            2.调用方法时，不希望传入参数的时候，就不用加后面的小括号（）-->
+        
+        <button @click="counterUp">+</button>
+        <button @click="counterDown">-</button>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        const app = new Vue({ 
+            el:'#app',
+            data:{
+                counter:0,
+            },
+            methods:{
+                counterUp(){
+                    this.counter++;
+                },
+                counterDown(){
+                    this.counter--;
+                }
+            },
+
+        })
+      
+    </script>    
+</body>
+</html>

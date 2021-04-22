@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on修饰符的使用</title>
+</head>
+
+<body>
+    <div id="app">
+        <!--.stop修饰符的使用-->
+        <div @click="divClick">
+            <button @click.stop="btnClick">按钮</button>
+        </div>
+
+        <div>
+            <!--prevent修饰符的使用-->
+            <form action="baidu">
+                <input type="submit" value="提交" @click.prevent="submitClick">
+            </form>
+        </div>
+
+        <!--监听某个按键的点击-->
+        <div>
+            <!-- <input type="text" @keyup.enter="keyUp">  想监听什么按键，就在@keyup后加加上.XX  -->
+            <!-- <input type="text" @keyup.esc="keyUp"> -->
+            <input type="text" @keyup.%="keyUp"> 
+
+        </div>
+
+        <!--只监听一次的修饰符 once   加上之后，便只能触发一次 -->
+        <!-- <button @click="onceBtn">once</button> -->
+        <button @click.once="onceBtn">once</button>
+
+
+
+    </div>
+    <script src="../js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                message: "aaa",
+            },
+            methods: {
+                divClick() {
+                    console.log("btnClick");
+                },
+                btnClick() {
+                    console.log("divClick");
+                },
+                submitClick(){
+                    console.log("aa");
+                },
+                keyUp(){
+                    console.log("keyUp");
+                },
+                onceBtn(){
+                    console.log("onceBtn");
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
