@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*一旦使用const修饰符，其不能修改*/
+        /*使用标识符之后，必须进行赋值*/
+        /*3.常量的含义是指向的对象不能改变，但可以改变对象内部的属性*/
+        const obj = {
+            name:'wht',
+            height:'1.88',
+            year:"24"
+        }
+        /*obj在上面已经定义了，这里不在用，会报错的*/
+        // obj = {}
+  
+
+        /*但是，可以改变内部的属性*/
+        obj.name = "aaaa";
+    </script>
+    
+</body>
+</html>

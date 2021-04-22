@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       /*1.属性的增强写法 */
+       const name = "zhang";
+       const age = 18;
+       const height = 1.88;
+
+       /*es5*/
+       const es5obj = {
+           name:name,
+           age:age,
+           height:height
+       }
+
+       console.log(es5obj)
+
+       /*es6*/
+       const es6obj= {
+           name,
+           age,
+           height
+       }
+       console.log(es6obj)
+
+
+   </script>    
+</body>
+</html>

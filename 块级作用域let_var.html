@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>块级作用域</title>
+</head>
+<body>
+    <button class="button">按钮1</button>
+    <button class="button">按钮2</button>
+    <button class="button">按钮3</button>
+    <button class="button">按钮4</button>
+    <button class="button">按钮5</button>
+
+    <p id="demo1" class="aaa">a</p>
+    <p id="dem1o">a</p>
+    <p id="de1mo">a</p>
+    <p id="demo">a</p>
+
+
+
+
+
+
+    <script>
+    //     {
+    //         var name = "why";
+    //         console.log("name");
+    //     }
+    //   document.write("name");
+
+    /*点击id为demo01的元素位置，监听点击，然后在id为demo 的位置输出innerHTML的元素*/
+    demo1.addEventListener("click", function(){
+    document.getElementById("demo").innerHTML = "Hello World";
+});
+
+  
+     var btns = document.getElementsByClassName('button');
+    //  for(var i=0;i<btns.length;i++){
+        //   btns[i].addEventListener("click",function(){
+        //       console.log("第"+ i + ("个按钮被点击"));
+             
+        //   })
+           /*实际上输出的是第五个元素，因为块级作用域的问题，i已经在里面循环了五次，变成五了*/
+              /*闭包可以解决，引文函数就是一个作用域*/
+
+    //  (function(i){
+    //     btns[i].addEventListener("click",function(){
+    //           console.log("第"+ (i+1) + ("个按钮被点击"));
+             
+    //       })
+    //  })(i)  
+    //  }
+
+     /*es6引入let*/ 
+     for(let i = 0;i<btns.length;i++){
+         btns[i].addEventListener("click",function(){
+            console.log("第"+ (i+1) + ("个按钮被点击"));
+         })
+     }
+
+    </script>
+   
+</body>
+</html>
