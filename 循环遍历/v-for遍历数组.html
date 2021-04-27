@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-for遍历数组</title>
+</head>
+
+<body>
+    <div id="app">
+        <!--在遍历中，没有使用我们的索引值，也就是数组的下标-->
+        <h2 v-for="name in names">{{name}}</h2>
+
+        <!--在遍历中，使用我们的索引值，也就是下标-->
+        <h2 v-for="(name , index) in names">{{index + 1}}.{{name }}</h2>
+
+
+        <!--遍历对象-->
+        <!--1.在遍历对象的过程中，如果只是获取一个值，那么获取的是value-->
+        <h3 v-for="item in info">{{item}}</h3>
+
+        <!--2.获取key和value   格式：（value，key）-->
+        <h3 v-for="(key,value) in info">{{value}}:{{key}}</h3>
+
+         <!--3.获取key和value和index   格式：（value，key，index）-->
+         <h3 v-for="(key,value,index) in info">{{index+1}}:{{value}}:"{{key}}"</h3>
+    </div>
+
+    <script src="../Vue/js/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                /*数组*/
+                names: ["波比", "塞纳", "鲁班", "寄生"],
+
+                /*对象*/
+                info: {
+                    name:"张三",
+                    age:"18",
+                    height:"1.66米",
+                    weight:"105斤"
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
