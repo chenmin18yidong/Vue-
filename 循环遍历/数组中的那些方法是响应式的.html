@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组中的那些方法是响应式的</title>
+</head>
+<style>
+    .button {
+        position: fixed;
+        top: 100px;
+        left: 300px;
+    }
+</style>
+
+<body>
+    <div id="app">
+        <h2 v-for="item in letters">{{item}}</h2>
+        <div class="button">
+            <button @click="pushClick">push按钮</button>
+            <button @click="popClick">pop按钮</button>
+            <button @click="shiftClick">shift按钮</button>
+            <button @click="unshiftClick">unshift按钮</button>
+            <button @click="spliceClick">splice按钮</button>
+            <button @click="soreClick">sore按钮</button>
+            <button @click="reverseClick">reverse按钮</button>
+
+        </div>
+
+
+    </div>
+    <script src="../Vue/js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: "#app",
+            data: {
+                letters: ["A", "B", "C", "D"]
+            },
+            methods: {
+                pushClick() {
+                    //1.push 方法  在数组最后面加上一个元素
+                    this.letters.push("sss")
+                },
+                //2.pop();   删除元素的第一个元素
+                popClick() {
+                    this.letters.pop();
+                },
+                //shift(); 删除数组的第一个元素
+                shiftClick() {
+                    this.letters.shift();
+                },
+                //unshiftClick(); 删除数组的第一个元素
+                unshiftClick() {
+                    this.letters.shift();
+                },
+                //spliceClick(); 删除数组的第一个元素
+                spliceClick() {
+                    this.letters.shift();
+                },
+                //soreClick(); 删除数组的第一个元素
+                soreClick() {
+                    this.letters.shift();
+                },
+                //reverseClick(); 删除数组的第一个元素
+                reverseClick() {
+                    this.letters.shift();
+                },
+
+
+            }
+        })
+    </script>
+</body>
+
+</html>
