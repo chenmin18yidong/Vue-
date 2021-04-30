@@ -25,11 +25,11 @@
             <li>常见问题</li>
           </ul>
         </div>
-        <div class="user_right">
+        <div class="user_right public_right_screen">
           <div class="user_right_one" v-show="show === 1">
             <div class="user_right_one_title">
-              <span></span>
-              <span>关于应用</span>
+              <span class="public_span_one"></span>
+              <span class="public_span_two">关于应用</span>
             </div>
             <div class="user_right_one_text">
               <span>刷题神器~复习备考智能题库APP，超千万用户使用的刷题利器，现已特权功能永久免费使用。
@@ -70,7 +70,31 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-
+//公共css
+.public_span_one{
+ display: inline-block;
+      width: 8px;
+      height: 20px;
+      margin: 10px 0 0 0;
+      background: #ff8200;
+}
+.public_span_two{
+  font-size: 24px;
+     font-weight: 900;
+     margin: 0 0 0 10px;
+}
+.public_right_screen{
+background: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 40px 0 0 20px;
+}
+.public_big_text{
+  font-size: 16px;
+}
+.punlic_small_text{
+  font-size: 14px;
+}
 .helpBody{
   width: 100%;
    background: #f7f7f7;
@@ -121,25 +145,9 @@ export default {
 .user_right {
   padding-left: 20px;
   width: 100%;
-  .user_right_one {
-  background: #fff;
-    width: 100%;
-    height: 100%;
-    padding: 40px 0 0 20px;
+
     .user_right_one_title{
       display: flex;
-      span:nth-child(1){
-      display: inline-block;
-      width: 8px;
-      height: 20px;
-      margin: 10px 0 0 0;
-      background: #ff8200;
-    }
-   span:nth-child(2){
-     font-size: 24px;
-     font-weight: 900;
-     margin: 0 0 0 10px;
-    }
   }
   .user_right_one_text{
     padding: 20px 80px 0 20px;
@@ -164,5 +172,5 @@ export default {
     height: 500px;
     background-color: black;
   }
-}
+
 </style>
