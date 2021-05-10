@@ -13,6 +13,10 @@
         top: 100px;
         left: 300px;
     }
+    button{
+        padding: 10px 20px;
+        margin: 20px ;
+    }
 </style>
 
 <body>
@@ -23,9 +27,12 @@
             <button @click="popClick">pop按钮</button>
             <button @click="shiftClick">shift按钮</button>
             <button @click="unshiftClick">unshift按钮</button>
-            <button @click="spliceClick">splice按钮</button>
-            <button @click="soreClick">sore按钮</button>
+            <button @click="splicedeleteClick">splice删除按钮</button>
+            <button @click="spliceaddClick">splice添加按钮</button>
+            <button @click="splicereplaceClick">splice替换按钮</button>
+            <button @click="sortClick">sort按钮</button>
             <button @click="reverseClick">reverse按钮</button>
+            <button @click="suyinClick">suyunClick按钮</button>
 
         </div>
 
@@ -36,7 +43,7 @@
         const app = new Vue({
             el: "#app",
             data: {
-                letters: ["A", "B", "C", "D"]
+                letters: ["A", "c", "b", "D"]
             },
             methods: {
                 pushClick() {
@@ -55,22 +62,56 @@
                 unshiftClick() {
                     this.letters.unshift("AAA","BBB","CCC");
                 },
-                //spliceClick(); 删除数组的第一个元素
-                spliceClick() {
-                    this.letters.shift();
+                //spliceClick(); splice  删除元素/插入元素/替换元素
+                splicedeleteClick() {
+                    //表示从第一个元素开始，删除其后面的两个元素,类推
+                    // this.letters.splice(1,2);
+                    this.letters.splice(start,2)
                 },
-                //soreClick(); 删除数组的第一个元素
-                soreClick() {
-                    this.letters.shift();
+                spliceaddClick() {
+                    //插入元素,例子：在第一个元素后面添加一个aa
+                    this.letters.splice(1,0,"aa");
                 },
-                //reverseClick(); 删除数组的第一个元素
+                splicereplaceClick() {
+                      //替换    
+                    this.letters.splice(1,3,"aaa","bbb","vvv");
+                  
+                },
+
+                //通过索引值修改数组中的元素，，不是响应式的
+               
+
+                //sortClick();对元素进行排序
+                sortClick() {
+                    this.letters.sort();
+                },
+                //reverseClick();对数组进行反转，位置调换
                 reverseClick() {
-                    this.letters.shift();
+                    this.letters.reverse();
                 },
 
-
+                suyinClick(){
+                    this.letters[0] = "aaa";
+                },
+                //app.letters
             }
         })
+
+
+        // function sum(num1,num2){
+        //     return num1+num2
+        // }
+        // function sumX(num1,num2,num3){
+        //     return num1+num2+num3
+        // }
+        // sum(20,30)
+        // console.log(sumX)
+
+       //可变参数
+        // function sum(...num){
+        //     console.log(num)
+        // }
+        // sum(10,20,30,1,50,60)
     </script>
 </body>
 
