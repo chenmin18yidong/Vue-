@@ -1,0 +1,459 @@
+:root {
+    --c_theme: #4d82d1; /* 主色 用于导航栏选中背景色、模块主标题、链接、选中色 */
+   
+    --c_text: #444; /* 用于导航文字默认状态、文字标题、产品名称、正文、描述、输入框输入文字*/
+    
+    --c_subtitle: #999;/* 用于副标题、注释文字、底部导航文字 */
+   
+    --c_b_dark: #e4e4e4; /* 用于深色背景、模块副标题、间隔线、下拉选中背景色 */
+    
+    --c_time: #bababa;/* 时间 */
+    
+    --c_frame: #e4e4e4;/* 用于边框 */ 
+    
+    --c_tips: #989898;/* 用于提示文字 */
+    
+    --c_b_nav: #fff;/* 用于导航栏背景色、反色文字 */
+    
+    --c_b_top_nav: #ebeff2;/* 用于顶部导航背景色 */
+    
+    --c_b_modular: #fff;/* 模块默认背景色 */
+    
+    --c_b_product: #fafafa;/* 产品中心背景色 */
+    
+    --c_b_bottom: #2b2b2b;/* 底部背景色 */
+    
+    --f_headline: 44px;/* h1大标题 banner主标题*/
+    --l_headline: 66px;/* h1大标题行高*/
+    
+    --f_title: 32px;/* h2标题 模块标题、数据展示*/
+    --l_title: 48px;/* h2标题行高*/
+    
+    --f_subtitle: 28px;/* 新闻详情标题 */
+    --l_subtitle: 42px;/* 新闻详情标题行高 */
+    
+    --f_product: 24px;/* 产品详情、产品名称 */
+    --l_product: 36px;/* 产品详情及产品名称行高 */
+    
+    --f_subtitle_contact: 18px;/* 新闻菜单,banner按钮文字, 特殊的h3给这个*/
+    --l_subtitle_contact: 30px;
+    
+    --f_text: 16px;/* 正文、按钮、banner副标题 */
+    --l_text: 24px; /* 正文行高 */
+    
+    --f_listText: 16px;/* 新闻标题、产品列表名称 图片下的标题*/
+    --l_listText: 24px;
+
+    --f_describe: 14px;/* 描述、副标题 */
+    --l_describe: 22px;
+    
+    --f_notes: 14px;/* 简介、日期、注释 */
+    --l_notes: 22px;
+    /* 调用方法 */
+    /* font-size: var(--f_text); var(调用名称)*/
+    /* line-height: var(--l_text); */
+
+}
+
+@media (max-width:768px) {
+    :root {
+        --f_headline: 22px;/* h1大标题 banner主标题*/
+        --l_headline: 32px; /*h1标题行高*/
+        
+        --f_title: 18px;/* h2标题 模块标题、数据展示*/
+        --l_title: 30px;/* h2标题行高 */
+       
+        --f_subtitle: 16px; /* 新闻详情标题 */
+        --l_subtitle: 26px;/* 新闻详情标题行高 */
+        
+        --f_product: 16px;/* 产品名称、产品详情 */
+        --l_product: 26px;/* 产品名称及产品详情行高 */
+        
+        --f_subtitle_contact: 16px;/* 新闻菜单,banner按钮, 特殊的h3给这个*/
+        --l_subtitle_contact: 26px;
+        
+        --f_text: 14px;/* 正文、按钮、banner副标题*/
+        --l_text: 24px;/* 正文行高 */
+        
+        --f_describe: 13px;/* 描述副标题 */
+        --l_describe: 20px;
+        /* 注释或时间 */
+        --f_notes: 12px;
+        --l_notes: 20px;
+        /* 调用方法 */
+        /* font-size: var(--f_text); var(调用名称)*/
+        /* line-height: var(--l_text); */
+    }
+}
+
+/*样式重置*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0px;
+    margin: 0;
+}
+
+img {
+    border: none;
+    vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+i {
+    font-style: normal;
+}
+
+input,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    outline: none;
+}
+
+body {
+    min-width: 375px;
+    font-family: 微软雅黑;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* 大按钮 只在banner使用*/
+.button_big {
+    display: block;
+    width: 138px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    color: var(--c_text);
+    font-size: 18px;
+    margin-top: 64px;
+    background-color: #fff;
+    border: 1px solid var(--c_text);
+    transition: 1s;
+    outline: none;
+    border-radius: 2px;
+}
+
+/* 大按钮划过 只在banner使用*/
+.button_big:hover {
+    color: var(--c_theme);
+    border: 1px solid var(--c_theme);
+}
+
+/* 小按钮 */
+.button_small {
+    display: block;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    color: var(--c_b_nav);
+    font-size: 16px;
+    margin-top: 40px;
+    background: var(--c_theme);
+    transition: 1s;
+    border: none;
+    border-radius: 2px;
+}
+
+/* 小按钮划过 */
+.button_small:hover {
+    opacity: 0.6;
+    color: var(--c_b_nav);
+}
+
+.button_text{
+    display: inline-block;
+    line-height: 24px;
+    text-align: left;
+    color: var(--c_text);
+    font-size: 16px;
+    margin-top: 32px;
+    transition: 1s;
+    position: relative;
+}
+
+.button_text:hover {
+    color: var(--c_theme);
+}
+.button_text:hover::after{
+    display: block;
+    content: '';
+    position: absolute;
+    animation: button_text 1s;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid var(--c_theme);
+}
+@keyframes button_text{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@media (max-width:768px) {
+    .button_big {
+        margin-top: 32px;
+    }
+
+    .button_small {
+        margin-top: 20px;
+        width: 88px;
+        height: 32px;
+        font-size: 14px;
+        line-height: 32px;
+    }
+
+    .button_text {
+        margin-top: 16px;
+    }
+
+}
+
+/*公共页面宽度*/
+.public_width{
+    width: 1400px;
+    margin: auto;
+}
+
+/*关于我们特殊宽*/
+.public_width_page {
+    width: 1200px;
+    margin: auto;
+}
+
+/*详情特殊宽*/
+.public_width_details {
+    width: 1000px;
+    margin: auto;
+}
+
+@media (max-width:1440px) {
+    .public_width {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        min-width: 375px;
+    }
+}
+
+@media (max-width:1240px) {
+    .public_width_page {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        min-width: 375px;
+    }
+}
+
+@media (max-width:1040px) {
+    .public_width_details {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        min-width: 375px;
+    }
+}
+/* 默认是左图右文或右文左图的间距为40px */
+/*当标题在内容里面时,标题与内容的间距为40px*/
+.public_title {
+    padding-bottom: 40px;
+}
+
+@media (max-width:768px) {
+    .public_title {
+        padding-bottom: 20px;
+    }
+}
+
+.public_title h2 {
+    color: var(--c_theme);
+    font-size: var(--f_title);
+    line-height: var(--l_title);
+    font-weight: 700;
+}
+
+.public_title p {
+    padding-top: 22px;
+    color: var(--c_subtitle);
+    font-size: var(--f_describe);
+    line-height: var(--l_describe);
+}
+/* 当标题在内容上面独立的时候,标题与下面内容的间距为60px */
+.title_center .public_title {
+    text-align: center;
+    padding-bottom: 60px;
+}
+@media (max-width:768px){
+    .title_center .public_title {
+        padding-bottom: 30px;
+    }
+    .public_title p {
+        padding-top: 10px;
+    }
+}
+.title_left .public_title {
+    text-align: left;
+}
+
+.title_right .public_title {
+    text-align: right;
+}
+
+.modular {
+    padding: 60px 0;
+}
+
+@media (max-width:768px) {
+    .modular {
+        padding: 30px 0;
+    }
+}
+
+.modular.full_screen{
+    padding: 0;
+}
+/* 视频播放样式 */
+.public_video_go{
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.public_video_go img{
+    opacity: 0;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0,0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: 1s;
+    transform: translateY(-66px);
+}
+.public_video_go:hover img{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.public_video{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    z-index: 6;
+}
+.public_video_box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 960px;
+    min-width: 375px;
+    max-height: 540px;
+    margin: auto;
+    z-index: 8;
+}
+.public_video_box img{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.8s;
+}
+.public_video_box:hover img{
+    opacity: 1;
+}
+.public_video video{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    outline: none;
+    /* margin: auto; */
+}
+.public_video_curtain{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    background: rgba(0, 0, 0,0.5);
+}
+@media (max-width:768px){
+    .public_video_box{
+        max-height: 340px;
+    }
+    .public_video_box img{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* 鼠标指针属性变小手指 */
+.public_finger{
+    cursor: pointer;
+}
+/* 图片属性截取，保图片不失真 */
+.public_img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* margin 横向居中 */
+.margin_auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 阴影效果 */
+.public_shadow {
+    box-shadow: 0 0 22px rgb(0 0 0 / 12%);
+}

@@ -1,0 +1,16 @@
+点击时，让两个div的高度相等
+
+ compare_height () {
+     eslint-disable-next-line no-undef
+     var count = $('.helpBody_left').height() - 66
+    eslint-disable-next-line no-undef
+     $('.helpBody_right').height(count)
+    }
+
+vue数组改变样式
+
+      // eslint-disable-next-line no-undef
+      $('.aa').css({
+        'display': 'none',
+        'color': 'red'
+      })
