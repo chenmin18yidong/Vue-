@@ -14,3 +14,27 @@ vue数组改变样式
         'display': 'none',
         'color': 'red'
       })
+
+
+
+
+英腾数据库    在config.js里面  粘贴   mysql{}这一段
+
+var  config = {
+
+
+  mysql : {
+        host:'rm-bp128kc396i9j5x79do.mysql.rds.aliyuncs.com', //服务器地址
+        port:3306, //端口
+        connectionLimit:10, //连接池限制
+        database:'zyonline', //数据库名
+        user:'tibosi_server', //用户名
+        password:'tbsServer@2021_1_19$', //密码
+        connectTimeout: 6 * 1000,
+        connectionLimit: 50
+    },
+
+
+
+
+}
