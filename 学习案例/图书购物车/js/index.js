@@ -55,16 +55,26 @@ const app = new Vue({
       //    for(let i = 0; i<this.books.length;i++){
       //      totalPrice += this.books[i].price*this.books[i].count
       //    }
-      //    return totalPrice
       // }
 
       // 2.for(let i in this.books)
-          for(let i in this.books){
+          // for(let i in this.books){
             // totalPrice += this.books[i].price*this.books[i].count
             // 简写
-            const book = this.books[i]
-              totalPrice += book.price*book.count
+            // const book = this.books[i]
+              // totalPrice += book.price*book.count
+          // }
+
+
+          //3.for(let i of this.books)
+          for(let item of this.books){
+            totalPrice += item.price*item.count
           }
+
+          //4.reduce
+
+
+
           return totalPrice
       }
     },
