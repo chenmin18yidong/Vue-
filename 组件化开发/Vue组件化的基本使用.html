@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件化的基本使用</title>
+</head>
+
+<body>
+    <!--cpn  component的缩写-->
+    <div class="app">
+        <con></con>
+        <con></con>
+        <con></con>
+    </div>
+    <div class="app2">
+        <con></con>
+    </div>
+    <script src="../two/js/vue.js"></script>
+
+
+    <script>
+        //es6
+        //1.创建组件构造器对象
+        const conCon = Vue.extend({
+            //模板，显示的html 代码
+            template: `
+            <div>
+                <h2>我是标题</h2>
+                <p>我是内容aaa</p>
+                <p>我是内容BBB</p>
+            </div`
+        })
+        //2.注册组件
+     Vue.component('con',conCon)  //前一个是组件使用时定义的名字，后一个是创建对象的名字
+
+        const app = new Vue({
+            el: ".app",
+            data: {
+                message: "aaa"
+            }
+        })
+        const app2 = new Vue({
+            el:'.app2',
+            data:{
+                message:"aaa"
+            }
+        })
+    </script>
+</body>
+
+</html>
