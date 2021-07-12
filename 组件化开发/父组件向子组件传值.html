@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>父组件向子组件传值</title>
+</head>
+
+<body>
+    <div class="app">
+        <con v-bind:cmovies="movies" :cmessage="message"></con>
+    </div>
+
+    <template id="con">
+             <!-- props:['cmovies'] -->
+             <div>
+                  <ul>
+                      <li v-for="item in cmovies">{{item}}</li>
+                  </ul>
+                  {{cmessage}}
+             </div>
+    </template>
+
+    <script src="../two/js/vue.js"></script>
+    <script>
+        const con = {
+            template:'#con',
+            // //数组写法
+            // props: ['cmovies','cmessage'],
+            //对象写法
+            props:{
+                //1.类型限制
+                // cmovies:Array,
+                // cmessage:String
+
+                //2.提供一些默认值
+                cmovies:{
+                    type:String,
+                    default:"aaa",
+                    required:true
+                }
+
+            }
+        }
+        const app = new Vue({
+            el: '.app',
+            data: {
+                 message:"qaa", 
+                 movies:['啊啊啊','哦哦哦','呃呃呃','uuuu','iiii']
+            },
+            components:{
+                con
+            }
+        })
+    </script>
+</body>
+
+</html>
