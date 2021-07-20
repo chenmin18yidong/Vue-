@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>组件传值_父传子（props驼峰标识）</title>
+</head>
+
+<body>
+    <div class="app">
+        <!--v-bind当前不支持驼峰-->
+        <!-- <cpn :cInfo='info'></cpn> -->
+
+        <!--加一个杠，就可以了-->
+        <cpn :c-info='info' :child-my-message='message'></cpn>
+    </div>
+    <template id="cpn">
+        <div>
+            <h2>{{childMyMessage}}</h2>
+            <h2>{{cInfo}}</h2>
+        </div>
+    </template>
+    <script src="../two/js/vue.js"></script>
+    <script>
+        const cpn = {
+            template: '#cpn',
+            props: {
+                cInfo: {
+                    type: Object,
+                    default() {
+                        return {}
+                    }
+                },
+                childMyMessage: {
+                    type: String,
+                    default: ' '
+                }
+            }
+        }
+
+        const app = new Vue({
+            el: '.app',
+            data: {
+                info: {
+                    name: 'aa',
+                    age: 18,
+                    sex: 'man'
+                },
+                message:'aaaaaaa'
+            },
+            components: {
+                cpn
+            }
+        })
+    </script>
+</body>
+
+</html>

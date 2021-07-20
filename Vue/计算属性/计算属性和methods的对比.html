@@ -38,6 +38,7 @@
                   return this.fristNmae + ' ' + this.lastName;
                 },
             },
+            //计算属性在多次使用时，只会调用一次，它是有缓存的
             computed:{
                   FullNmae:function(){
                       console.log("FullNmae");
