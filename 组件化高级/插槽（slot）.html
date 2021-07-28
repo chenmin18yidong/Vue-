@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>插槽的基本使用</title>
+</head>
+
+<body>
+
+    <div class="app">
+        <cpn><button>aaa</button></cpn>
+        <cpn><span>aaa</span></cpn>
+        <cpn>
+            <input type="text" placeholder="aaa">
+        </cpn>
+        <cpn></cpn>
+
+    </div>
+
+    <template id="cpn">
+        <div>
+            <h2>我是组件</h2>
+            <p>我是组件哈哈哈 </p>
+            <!--插槽
+            抽取共性，保存不同，相当于一个预留位置，一个公共的东西-->
+            <slot><button>aaaa</button></slot>
+            <!--可以给一个默认值，不赋值时，就使用默认值-->
+        </div>
+
+    </template>
+
+    <script src="../two/js/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '.app',
+            data: {
+                message: 'aa'
+            },
+            components: {
+                cpn: {
+                    template: "#cpn",
+                    methods: {
+
+                    }
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>
